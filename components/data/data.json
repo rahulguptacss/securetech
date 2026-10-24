@@ -1,0 +1,554 @@
+{
+  "common": {
+    "Header": {
+      "logo": "/logo/logo.png",
+      "logo_text": "SecureTech",
+      "logo_subtext": "CYBER SECURITY",
+      "links": [
+        {
+          "name": "Home",
+          "href": "/"
+        },
+        {
+          "name": "About Us",
+          "href": "/about"
+        },
+        {
+          "name": "Our Services",
+          "href": "/services"
+        },
+        {
+          "name": "Portfolio",
+          "href": "/portfolio"
+        },
+        {
+          "name": "Blog",
+          "href": "/blog"
+        },
+        {
+          "name": "Faqs",
+          "href": "/faq"
+        },
+        {
+          "name": "Contact Us",
+          "href": "/contact"
+        }
+      ],
+      "button_text": "Get a Quote",
+      "button_link": "/contact",
+      "menu_aria_label": "Open navigation menu",
+      "close_aria_label": "Close navigation menu"
+    },
+    "Footer": {
+      "cta_title_regular": "Let's Talk and",
+      "cta_title_highlight": "Work Together",
+      "cta_description": "Have a project in mind or need expert advice? Get in touch with our team and let's build a safer, more secure digital future together.",
+      "email": "support@xyz.com",
+      "phone": "(+1) 0000000000",
+      "follow_us_text": "Follow Us",
+      "socials": [
+        {
+          "name": "Facebook",
+          "href": "https://facebook.com",
+          "icon": "facebook"
+        },
+        {
+          "name": "Instagram",
+          "href": "https://instagram.com",
+          "icon": "instagram"
+        },
+        {
+          "name": "YouTube",
+          "href": "https://youtube.com",
+          "icon": "youtube"
+        },
+        {
+          "name": "Twitter",
+          "href": "https://twitter.com",
+          "icon": "twitter"
+        },
+        {
+          "name": "LinkedIn",
+          "href": "https://linkedin.com",
+          "icon": "linkedin"
+        }
+      ],
+      "button_text": "Get Started",
+      "button_link": "/contact",
+      "logo": "/logo/logo.png",
+      "logo_text": "SecureTech",
+      "logo_subtext": "SAFER TOMORROW",
+      "copyright": "Copyright © 2023 SecureTech. All rights reserved.",
+      "links": [
+        {
+          "name": "Home",
+          "href": "/"
+        },
+        {
+          "name": "About Us",
+          "href": "/about"
+        },
+        {
+          "name": "Our Services",
+          "href": "/services"
+        },
+        {
+          "name": "Portfolio",
+          "href": "/portfolio"
+        },
+        {
+          "name": "Blog",
+          "href": "/blog"
+        },
+        {
+          "name": "Faqs",
+          "href": "/faq"
+        },
+        {
+          "name": "Contact Us",
+          "href": "/contact"
+        }
+      ]
+    },
+    "BackToTop": {
+      "aria_label": "Back to top of page"
+    }
+  },
+  "categories": {
+    "CyberSecurity": {
+      "templateComponents": {
+        "template-1": {
+          "pages": {
+            "home": {
+              "title": "SecureTech | Advanced Cyber Security Solutions",
+              "pageName": "Home",
+              "metadata": {
+                "title": "SecureTech | Advanced Cyber Security Solutions For A Safer Tomorrow",
+                "description": "Protect, detect, and prevent cyber threats with SecureTech's enterprise security operations, 24/7 monitoring, cloud defense, and data privacy."
+              },
+              "components": [
+                {
+                  "key": "HeroSection",
+                  "component": "Hero"
+                },
+                {
+                  "key": "AboutSection",
+                  "component": "About"
+                },
+                {
+                  "key": "SocBannerSection",
+                  "component": "SocBanner"
+                },
+                {
+                  "key": "ServicesSection",
+                  "component": "Services"
+                },
+                {
+                  "key": "ProcessSection",
+                  "component": "Process"
+                },
+                {
+                  "key": "BlogSection",
+                  "component": "Blog"
+                }
+              ]
+            },
+            "about": {
+              "title": "About Us | SecureTech Cyber Security",
+              "pageName": "About Us",
+              "metadata": {
+                "title": "About SecureTech | Global Cyber Security Solutions",
+                "description": "Learn about SecureTech's mission to establish and maintain complete digital security for businesses worldwide."
+              },
+              "watermark": "ABOUT",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "AboutSection",
+                  "component": "About"
+                },
+                {
+                  "key": "SocBannerSection",
+                  "component": "SocBanner"
+                },
+                {
+                  "key": "ProcessSection",
+                  "component": "Process"
+                }
+              ]
+            },
+            "services": {
+              "title": "Cyber Services | SecureTech",
+              "pageName": "Cyber Services",
+              "metadata": {
+                "title": "Enterprise Cyber Security Services | SecureTech",
+                "description": "Explore our comprehensive suite of cybersecurity services: Data Privacy, Security Awareness Training, and 24/7 SOC Operations."
+              },
+              "watermark": "SERVICES",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "ServicesSection",
+                  "component": "Services"
+                },
+                {
+                  "key": "ProcessSection",
+                  "component": "Process"
+                }
+              ]
+            },
+            "portfolio": {
+              "title": "Case Studies & Portfolio | SecureTech",
+              "pageName": "Portfolio",
+              "metadata": {
+                "title": "Cyber Defense Case Studies | SecureTech",
+                "description": "Explore how SecureTech protects critical infrastructure and delivers impenetrable security for Fortune 500 companies."
+              },
+              "watermark": "PORTFOLIO",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "PortfolioSection",
+                  "component": "Portfolio"
+                }
+              ]
+            },
+            "blog": {
+              "title": "Cyber Insights & Blog | SecureTech",
+              "pageName": "Blog",
+              "metadata": {
+                "title": "Cyber Security Insights & Articles | SecureTech",
+                "description": "Find useful tips, industry research, and expert cybersecurity threat intelligence in our blog posts."
+              },
+              "watermark": "BLOG",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "BlogSection",
+                  "component": "Blog"
+                }
+              ]
+            },
+            "faq": {
+              "title": "Frequently Asked Questions | SecureTech",
+              "pageName": "FAQ",
+              "metadata": {
+                "title": "Cyber Security FAQ | SecureTech",
+                "description": "Common questions and answers regarding our cyber defense solutions, incident response, and SLA guarantees."
+              },
+              "watermark": "FAQ",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "FaqSection",
+                  "component": "Faq"
+                }
+              ]
+            },
+            "contact": {
+              "title": "Contact Us | SecureTech",
+              "pageName": "Contact Us",
+              "metadata": {
+                "title": "Contact SecureTech Cyber Security Operations",
+                "description": "Get in touch with our 24/7 security engineers and request an urgent security posture assessment."
+              },
+              "watermark": "CONTACT",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "ContactSection",
+                  "component": "Contact"
+                }
+              ]
+            },
+            "not_found": {
+              "code": "404",
+              "badge": "Security Alert",
+              "title": "Access Terminated / Page Not Found",
+              "description": "The requested resource has been moved, encrypted, or does not exist.",
+              "back_home": {
+                "text": "Return to Base",
+                "href": "/"
+              }
+            }
+          },
+          "sections": {
+            "breadcrumb": {
+              "background_image": "/images/soc-room.jpg",
+              "background_alt": "SecureTech Cyber Security Center",
+              "items": [
+                {
+                  "name": "Home",
+                  "href": "/"
+                }
+              ]
+            },
+            "hero": {
+              "eyebrow": "PROTECT . DETECT . PREVENT",
+              "title_line1": "Advanced Cyber Security",
+              "title_line2": "Solutions For A",
+              "title_highlight": "SAFER TOMORROW",
+              "description": "Empowering enterprise security with next-generation threat intelligence, AI-assisted zero-trust infrastructure, and rapid incident response.",
+              "cta_text": "Get a Quote",
+              "cta_link": "/contact",
+              "image": "/images/hero-hacker.jpg",
+              "image_alt": "Advanced Cyber Security specialist in high-tech digital control room"
+            },
+            "about": {
+              "eyebrow": "ABOUT US",
+              "title_regular": "Establish and maintain complete",
+              "title_highlight": "digital security",
+              "description": "We help businesses establish and maintain complete digital security with advanced technologies, expert guidance and proactive solutions to stay ahead of evolving cyber threats.",
+              "button_text": "Learn More",
+              "button_link": "/about",
+              "image": "/images/about-robot.jpg",
+              "image_alt": "Futuristic cyber robotic hand touching digital holographic padlock shield",
+              "badge": {
+                "icon": "shield-check",
+                "title": "Secure Protection",
+                "subtitle": "Protect your digital environment"
+              }
+            },
+            "soc_banner": {
+              "image": "/images/soc-room.jpg",
+              "image_alt": "Security Operations Center with real-time global telemetry and multi-monitor threat display"
+            },
+            "services": {
+              "eyebrow": "OUR SERVICES",
+              "wave_image": "/images/save-wave.png",
+              "wave_alt": "Glowing 3D neon cyber grid digital wave illustration",
+              "badge_text": "OUR SERVICES",
+              "items": [
+                {
+                  "id": "privacy",
+                  "title_regular": "Data privacy",
+                  "title_highlight": "program",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDolore tellus, luctus nec ullamcorper consectetur.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services#privacy"
+                },
+                {
+                  "id": "training",
+                  "title_regular": "Security awareness",
+                  "title_highlight": "training",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDolore tellus, luctus nec ullamcorper consectetur.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services#training"
+                },
+                {
+                  "id": "safety",
+                  "title_regular": "Comprehensive",
+                  "title_highlight": "24/7 safety",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDolore tellus, luctus nec ullamcorper consectetur.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services#safety"
+                }
+              ]
+            },
+            "process": {
+              "eyebrow": "HOW IT WORKS",
+              "title_regular": "Our Simple Process For",
+              "title_highlight": "Stronger Security",
+              "description": "We follow a structured approach to understand your needs, implement the right solutions and ensure continuous protection for your business.",
+              "steps": [
+                {
+                  "number": "01",
+                  "icon": "file-search",
+                  "title": "Assess Your Needs",
+                  "description": "We analyze your current systems, identify vulnerabilities and understand your security goals."
+                },
+                {
+                  "number": "02",
+                  "icon": "shield-check",
+                  "title": "Create a Secure Plan",
+                  "description": "Our experts design a customized security strategy tailored to your business requirements."
+                },
+                {
+                  "number": "03",
+                  "icon": "settings",
+                  "title": "Implement Solutions",
+                  "description": "We deploy advanced security tools and best practices to protect your digital environment."
+                },
+                {
+                  "number": "04",
+                  "icon": "bar-chart",
+                  "title": "Monitor & Support",
+                  "description": "We continuously monitor threats, provide regular updates and offer ongoing support for complete peace of mind."
+                }
+              ]
+            },
+            "blog": {
+              "eyebrow": "BLOG & ARTICLES",
+              "title_regular": "Find Useful Tips",
+              "title_highlight": "Blog Posts",
+              "description": "Explore expert insights, cybersecurity tips, industry trends and best practices to keep your business secure in the digital world.",
+              "button_text": "View All Blog",
+              "button_link": "/blog",
+              "posts": [
+                {
+                  "id": "post-1",
+                  "slug": "top-10-cyber-security-threats-2024",
+                  "image": "/images/blog-threats.jpg",
+                  "image_alt": "Top 10 Cyber Security Threats Businesses Should Watch in 2024",
+                  "category": "Cyber Security",
+                  "title": "Top 10 Cyber Security Threats Businesses Should Watch in 2024",
+                  "excerpt": "Stay ahead of evolving cyber threats. Discover the top 10 security risks businesses face in 2024 and how to protect against them.",
+                  "author": "David Miller",
+                  "date": "October 15, 2024"
+                },
+                {
+                  "id": "post-2",
+                  "slug": "how-to-create-a-strong-password-policy",
+                  "image": "/images/blog-password.jpg",
+                  "image_alt": "How to Create a Strong Password Policy for Your Organization",
+                  "category": "Best Practices",
+                  "title": "How to Create a Strong Password Policy for Your Organization",
+                  "excerpt": "A strong password policy is essential for preventing unauthorized access. Learn best practices to create a secure and effective password strategy.",
+                  "author": "Sarah Johnson",
+                  "date": "October 10, 2024"
+                },
+                {
+                  "id": "post-3",
+                  "slug": "key-strategies-to-secure-cloud-infrastructure",
+                  "image": "/images/blog-cloud.jpg",
+                  "image_alt": "Key Strategies to Secure Your Cloud Infrastructure",
+                  "category": "Cloud Security",
+                  "title": "Key Strategies to Secure Your Cloud Infrastructure",
+                  "excerpt": "Learn essential strategies to protect your cloud environment, ensure data privacy and maintain compliance in a multi-cloud world.",
+                  "author": "Michael Carter",
+                  "date": "October 5, 2024"
+                },
+                {
+                  "id": "post-4",
+                  "slug": "the-role-of-threat-intelligence-modern-cyber-security",
+                  "image": "/images/blog-intel.jpg",
+                  "image_alt": "The Role of Threat Intelligence in Modern Cyber Security",
+                  "category": "Threat Intelligence",
+                  "title": "The Role of Threat Intelligence in Modern Cyber Security",
+                  "excerpt": "Understand how threat intelligence helps businesses detect, prevent and respond to cyber attacks before they cause damage.",
+                  "author": "Emma Wilson",
+                  "date": "September 28, 2024"
+                }
+              ]
+            },
+            "cta_banner": {
+              "title_regular": "Let's Talk and",
+              "title_highlight": "Work Together",
+              "description": "Have a project in mind or need expert advice? Get in touch with our team and let's build a safer, more secure digital future together.",
+              "email": "support@xyz.com",
+              "phone": "(+1) 0000000000",
+              "follow_us_text": "Follow Us",
+              "socials": [
+                {
+                  "name": "Facebook",
+                  "href": "https://facebook.com",
+                  "icon": "facebook"
+                },
+                {
+                  "name": "Instagram",
+                  "href": "https://instagram.com",
+                  "icon": "instagram"
+                },
+                {
+                  "name": "YouTube",
+                  "href": "https://youtube.com",
+                  "icon": "youtube"
+                },
+                {
+                  "name": "Twitter",
+                  "href": "https://twitter.com",
+                  "icon": "twitter"
+                },
+                {
+                  "name": "LinkedIn",
+                  "href": "https://linkedin.com",
+                  "icon": "linkedin"
+                }
+              ],
+              "button_text": "Get Started",
+              "button_link": "/contact"
+            },
+            "contact": {
+              "eyebrow": "CONTACT US",
+              "title_regular": "Get In Touch With Our",
+              "title_highlight": "Security Experts",
+              "description": "Contact our certified team of defensive analysts and ethical hackers for threat consultations, vulnerability tests, or emergency incident responses.",
+              "email": "support@securetech.com",
+              "phone": "+1 (123) 456-7890",
+              "address": "777 Cyber Defense Way, Suite 400, San Francisco, CA"
+            },
+            "faq": {
+              "eyebrow": "FREQUENTLY ASKED QUESTIONS",
+              "title_regular": "Everything You Need To Know About",
+              "title_highlight": "Our Protection",
+              "items": [
+                {
+                  "question": "What is the typical response time during an active security incident?",
+                  "answer": "Our dedicated 24/7 SOC team responds within 15 minutes of any critical severity alert, providing immediate isolation and threat remediation."
+                },
+                {
+                  "question": "Can SecureTech integrate with our existing IT infrastructure?",
+                  "answer": "Yes. Our zero-trust agents and SIEM connectors integrate seamlessly with AWS, Azure, Google Cloud, hybrid on-prem networks, and Microsoft 365."
+                },
+                {
+                  "question": "How often are vulnerability assessments conducted?",
+                  "answer": "We provide automated continuous daily scanning alongside deep manual penetration testing on a monthly or quarterly schedule depending on your tier."
+                },
+                {
+                  "question": "Do you provide regulatory compliance documentation?",
+                  "answer": "Yes, we support SOC 2 Type II, ISO 27001, HIPAA, GDPR, and PCI-DSS compliance audits with automated evidence reporting."
+                }
+              ]
+            },
+            "portfolio": {
+              "eyebrow": "PORTFOLIO & CASE STUDIES",
+              "title_regular": "Proven Defense Across",
+              "title_highlight": "Global Enterprises",
+              "items": [
+                {
+                  "id": "case-1",
+                  "title": "Global Fintech Zero-Trust Architecture",
+                  "category": "Financial Services",
+                  "result": "Zero Breaches, 99.999% Uptime",
+                  "image": "/images/blog-cloud.jpg"
+                },
+                {
+                  "id": "case-2",
+                  "title": "Healthcare Network Ransomware Defense",
+                  "category": "Healthcare IT",
+                  "result": "100% Data Integrity Preserved",
+                  "image": "/images/soc-room.jpg"
+                },
+                {
+                  "id": "case-3",
+                  "title": "Critical Infrastructure Threat Hunting",
+                  "category": "Industrial Automation",
+                  "result": "Over 2,400 APTs Neutralized",
+                  "image": "/images/hero-hacker.jpg"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,26 +1,222 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #040812;
+  --foreground: #f8fafc;
+  --color-primary: #00f0ff;
+  --color-primary-glow: rgba(0, 240, 255, 0.4);
+  --color-secondary: #00ffb2;
+  --color-navy: #070e1c;
+  --color-card: #091224;
+  --color-border: #142742;
+  --color-muted: #94a3b8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-navy: var(--color-navy);
+  --color-card: var(--color-card);
+  --color-border: var(--color-border);
+  --color-muted: var(--color-muted);
+  --font-heading: var(--font-outfit), 'Inter', sans-serif;
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  background-color: #040812;
+  color: #f8fafc;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #040812;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #040812;
+}
+::-webkit-scrollbar-thumb {
+  background: #142742;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f0ff;
+}
+
+/* Cyber glowing gradient texts */
+.text-cyan-gradient {
+  background: linear-gradient(135deg, #00f0ff 0%, #00ffb2 50%, #38ef7d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-cyber-glow {
+  text-shadow: 0 0 20px rgba(0, 240, 255, 0.6), 0 0 40px rgba(0, 255, 178, 0.3);
+}
+
+/* Cyber subtle grid background overlay */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 240, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Cyber card border glow */
+.cyber-card {
+  background: linear-gradient(180deg, rgba(9, 18, 36, 0.85) 0%, rgba(5, 11, 22, 0.95) 100%);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.cyber-card:hover {
+  border-color: rgba(0, 240, 255, 0.45);
+  box-shadow: 0 16px 40px -10px rgba(0, 240, 255, 0.18), inset 0 1px 0 0 rgba(0, 240, 255, 0.2);
+}
+
+/* Cyber CTA Button */
+.btn-cyber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  background: linear-gradient(135deg, #00f0ff 0%, #00ffb2 100%);
+  color: #020712;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.btn-cyber:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 35px rgba(0, 240, 255, 0.7);
+}
+
+/* Pulsing radar rings */
+@keyframes radar-pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+}
+
+.animate-radar {
+  animation: radar-pulse 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes cyber-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: cyber-float 5s ease-in-out infinite;
+}
+
+/* Cyber Header Dot Pulsing & Radar Glow */
+@keyframes cyber-dot-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px #00f0ff, 0 0 18px #00f0ff, 0 0 28px rgba(0, 240, 255, 0.7);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 14px #00f0ff, 0 0 28px #00ffb2, 0 0 42px rgba(0, 240, 255, 0.95);
+  }
+}
+
+.animate-dot-glow {
+  animation: cyber-dot-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes cyber-ring-expand {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.85;
+  }
+  80%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.animate-ring-expand {
+  animation: cyber-ring-expand 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+
+/* Hero Scan Line Animation */
+@keyframes cyber-scanline {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.85;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}
+
+.animate-scanline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #00f0ff 40%, #00ffb2 60%, transparent 100%);
+  box-shadow: 0 0 14px #00f0ff, 0 0 24px rgba(0, 255, 178, 0.8);
+  animation: cyber-scanline 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Shield Glow Pulse */
+@keyframes shield-glow-pulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+.animate-shield-glow {
+  animation: shield-glow-pulse 3s ease-in-out infinite;
+}
+
