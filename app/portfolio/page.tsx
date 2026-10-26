@@ -10,8 +10,10 @@ import { common, pages, sections, type PageComponent } from '../../components/ty
 const pageData = pages.portfolio;
 
 export const metadata: Metadata = {
-  title: pageData.metadata.title,
-  description: pageData.metadata.description,
+  title: pageData?.metadata?.title || 'Portfolio | SecureTech Cyber Security',
+  description:
+    pageData?.metadata?.description ||
+    'Explore our portfolio of proven cybersecurity solutions and real-world implementations.',
 };
 
 export default function PortfolioPage() {
@@ -19,20 +21,29 @@ export default function PortfolioPage() {
     Breadcrumb: (
       <Breadcrumb
         data={sections.breadcrumb}
-        currentPage={pageData.pageName}
-        watermark={pageData.watermark}
+        currentPage={pageData?.pageName || 'Portfolio'}
+        watermark={pageData?.watermark || 'PORTFOLIO'}
       />
     ),
     Portfolio: <Portfolio data={sections.portfolio} />,
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#040812] text-slate-100 font-sans">
+    <div className="flex min-h-screen flex-col bg-[#000000] text-slate-100 font-sans">
       <Header data={common.Header} />
       <main className="w-full flex-1">
-        {pageData.components.map((block: PageComponent) => (
+        {pageData?.components?.map((block: PageComponent) => (
           <React.Fragment key={block.key}>{sectionMap[block.component] ?? null}</React.Fragment>
-        ))}
+        )) || (
+          <>
+            <Breadcrumb
+              data={sections.breadcrumb}
+              currentPage="Portfolio"
+              watermark="PORTFOLIO"
+            />
+            <Portfolio data={sections.portfolio} />
+          </>
+        )}
       </main>
       <Footer data={common.Footer} />
       <BackToTop data={common.BackToTop} />

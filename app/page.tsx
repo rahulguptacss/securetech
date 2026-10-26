@@ -23,9 +23,17 @@ export default function Home() {
     Hero: <Hero data={sections.hero} />,
     About: <About data={sections.about} />,
     SocBanner: <SocBanner data={sections.soc_banner} />,
-    Services: <Services data={sections.services} />,
+    Services: (
+      <Services
+        data={{
+          ...sections.services,
+          items: sections.services.items.slice(0, 3),
+        }}
+        limit={3}
+      />
+    ),
     Process: <Process data={sections.process} />,
-    Blog: <Blog data={sections.blog} />,
+    Blog: <Blog data={sections.blog} limit={4} showButton={true} />,
   };
 
   return (

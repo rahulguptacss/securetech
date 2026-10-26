@@ -1,54 +1,80 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
-import { ShieldCheck, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import type { PortfolioSectionData, PortfolioItem } from '../../types';
-import Eyebrow from '../../ui/Eyebrow';
 
 interface PortfolioProps {
   data: PortfolioSectionData;
 }
 
 export default function Portfolio({ data }: PortfolioProps) {
-  return (
-    <section className="relative w-full py-20 sm:py-28 bg-[#040812] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Eyebrow text={data.eyebrow} align="center" />
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight">
-            <span>{data.title_regular} </span>
-            <span className="text-[#00f0ff] text-cyber-glow">
-              {data.title_highlight}
-            </span>
-          </h2>
-        </div>
+  const items: PortfolioItem[] = data?.items || [];
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {data.items.map((item: PortfolioItem) => (
+  return (
+    <section
+      id="portfolio-grid"
+      className="relative w-full pt-8 sm:pt-10 lg:pt-14 pb-20 sm:pb-24 lg:pb-32 bg-[#000000]"
+    >
+      {/* Subtle ambient cyan glow in background */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[600px] w-[900px] rounded-full bg-[#00f0ff]/[0.03] blur-[160px]" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 3x3 Project Grid Matching Screenshot */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8 lg:gap-9">
+          {items.map((item, index) => (
             <div
               key={item.id}
-              className="group rounded-2xl border border-cyan-500/20 bg-[#071122]/90 overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.8)] hover:border-cyan-400/50 transition-all duration-300"
+              className="group relative flex flex-col rounded-2xl bg-[#000000] border border-[#00f0ff]/40 shadow-[0_0_20px_rgba(0,240,255,0.12)] hover:border-[#00f0ff] hover:shadow-[0_0_35px_rgba(0,240,255,0.28)] transition-all duration-300 hover:-translate-y-1 overflow-hidden"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              {/* Card Image: Aspect 1.88/1 matching screenshot with crisp zoom on hover */}
+              <div className="relative w-full aspect-[1.88/1] overflow-hidden bg-black shrink-0">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={item.image_alt || item.title}
                   fill
-                  className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  priority={index < 3}
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#071122] via-transparent to-transparent" />
               </div>
 
-              <div className="p-6">
-                <span className="text-xs font-bold tracking-wider text-[#00f0ff] uppercase mb-2 block">
+              {/* Card Body exactly matching close-up screenshot */}
+              <div className="px-6 sm:px-7 pt-5 sm:pt-6 pb-6 sm:pb-7 flex flex-col flex-1 bg-[#000000]">
+                {/* Category: Bold uppercase cyan */}
+                <span className="text-xs sm:text-[13px] font-bold tracking-[0.08em] sm:tracking-[0.1em] text-[#00f0ff] uppercase mb-2 block">
                   {item.category}
                 </span>
-                <h3 className="text-lg font-bold text-white mb-3 group-hover:text-[#00f0ff] transition-colors">
-                  {item.title}
+
+                {/* Project Title: Bold crisp white */}
+                <h3 className="text-xl sm:text-[22px] font-bold text-white tracking-tight leading-snug mb-2.5 transition-colors group-hover:text-[#00f0ff]">
+                  <Link href={item.link_href} className="hover:underline">
+                    {item.title}
+                  </Link>
                 </h3>
-                <div className="inline-flex items-center gap-2 rounded-lg bg-cyan-950/60 border border-cyan-400/30 px-3 py-1.5 text-xs font-semibold text-slate-200">
-                  <ShieldCheck className="h-4 w-4 text-[#00ffb2]" />
-                  <span>{item.result}</span>
+
+                {/* Project Description: Soft light gray */}
+                <p className="text-[13.5px] sm:text-[14.5px] leading-relaxed text-[#cbd5e1] font-light mb-6 flex-1 line-clamp-2">
+                  {item.description}
+                </p>
+
+                {/* View Project Action Row: Title-case text + bright cyan filled circle with black arrow */}
+                <div className="mt-auto pt-1">
+                  <Link
+                    href={item.link_href}
+                    className="inline-flex items-center gap-3.5 group/btn"
+                  >
+                    <span className="text-sm sm:text-[15px] font-bold text-[#00f0ff] transition-colors group-hover/btn:text-white">
+                      {item.link_text || 'View Project'}
+                    </span>
+                    <span className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-[#00f0ff] text-black shadow-[0_0_12px_rgba(0,240,255,0.4)] transition-all duration-300 group-hover/btn:bg-white group-hover/btn:shadow-[0_0_20px_#00f0ff] group-hover/btn:scale-110">
+                      <ArrowRight className="h-4 w-4 sm:h-4.5 sm:w-4.5 stroke-[2.5] transition-transform duration-300 group-hover/btn:translate-x-0.5" />
+                    </span>
+                  </Link>
                 </div>
               </div>
             </div>

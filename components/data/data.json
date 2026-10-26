@@ -1,7 +1,7 @@
 {
   "common": {
     "Header": {
-      "logo": "/logo/logo.png",
+      "logo": "/logo/logo.webp",
       "logo_text": "SecureTech",
       "logo_subtext": "CYBER SECURITY",
       "links": [
@@ -15,11 +15,55 @@
         },
         {
           "name": "Our Services",
-          "href": "/services"
+          "href": "/services",
+          "children": [
+            {
+              "name": "Managed Security Services",
+              "href": "/services/managed-security-services"
+            },
+            {
+              "name": "Incident Response & Recovery",
+              "href": "/services/incident-response-recovery"
+            },
+            {
+              "name": "Data Protection & Encryption",
+              "href": "/services/data-protection-encryption"
+            },
+            {
+              "name": "Compliance & Risk Management",
+              "href": "/services/compliance-risk-management"
+            },
+            {
+              "name": "Threat Hunting & SOC",
+              "href": "/services/threat-hunting-soc"
+            },
+            {
+              "name": "Cloud Security Architecture",
+              "href": "/services/cloud-security-architecture"
+            }
+          ]
         },
         {
           "name": "Portfolio",
-          "href": "/portfolio"
+          "href": "/portfolio",
+          "children": [
+            {
+              "name": "Enterprise Cloud Security",
+              "href": "/portfolio/enterprise-cloud-security"
+            },
+            {
+              "name": "Secure Network Infrastructure",
+              "href": "/portfolio/secure-network-infrastructure"
+            },
+            {
+              "name": "Zero-Trust Architecture",
+              "href": "/portfolio/zero-trust-architecture"
+            },
+            {
+              "name": "SOC Implementation",
+              "href": "/portfolio/soc-implementation"
+            }
+          ]
         },
         {
           "name": "Blog",
@@ -35,7 +79,7 @@
         }
       ],
       "button_text": "Get a Quote",
-      "button_link": "/contact",
+      "button_link": "/get-a-quote",
       "menu_aria_label": "Open navigation menu",
       "close_aria_label": "Close navigation menu"
     },
@@ -75,10 +119,10 @@
       ],
       "button_text": "Get Started",
       "button_link": "/contact",
-      "logo": "/logo/logo.png",
+      "logo": "/logo/logo.webp",
       "logo_text": "SecureTech",
       "logo_subtext": "SAFER TOMORROW",
-      "copyright": "Copyright © 2023 SecureTech. All rights reserved.",
+      "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow",
       "links": [
         {
           "name": "Home",
@@ -171,18 +215,18 @@
                   "component": "About"
                 },
                 {
-                  "key": "SocBannerSection",
-                  "component": "SocBanner"
-                },
-                {
                   "key": "ProcessSection",
                   "component": "Process"
+                },
+                {
+                  "key": "MissionVisionSection",
+                  "component": "MissionVision"
                 }
               ]
             },
             "services": {
-              "title": "Cyber Services | SecureTech",
-              "pageName": "Cyber Services",
+              "title": "Our Services | SecureTech",
+              "pageName": "Our Services",
               "metadata": {
                 "title": "Enterprise Cyber Security Services | SecureTech",
                 "description": "Explore our comprehensive suite of cybersecurity services: Data Privacy, Security Awareness Training, and 24/7 SOC Operations."
@@ -204,11 +248,11 @@
               ]
             },
             "portfolio": {
-              "title": "Case Studies & Portfolio | SecureTech",
+              "title": "Portfolio | SecureTech Cyber Security",
               "pageName": "Portfolio",
               "metadata": {
-                "title": "Cyber Defense Case Studies | SecureTech",
-                "description": "Explore how SecureTech protects critical infrastructure and delivers impenetrable security for Fortune 500 companies."
+                "title": "Portfolio | SecureTech Cyber Security",
+                "description": "Explore our portfolio of proven cybersecurity solutions and real-world implementations."
               },
               "watermark": "PORTFOLIO",
               "components": [
@@ -242,13 +286,13 @@
               ]
             },
             "faq": {
-              "title": "Frequently Asked Questions | SecureTech",
-              "pageName": "FAQ",
+              "title": "Faqs | SecureTech",
+              "pageName": "Faqs",
               "metadata": {
                 "title": "Cyber Security FAQ | SecureTech",
                 "description": "Common questions and answers regarding our cyber defense solutions, incident response, and SLA guarantees."
               },
-              "watermark": "FAQ",
+              "watermark": "FAQS",
               "components": [
                 {
                   "key": "BreadcrumbSection",
@@ -267,7 +311,7 @@
                 "title": "Contact SecureTech Cyber Security Operations",
                 "description": "Get in touch with our 24/7 security engineers and request an urgent security posture assessment."
               },
-              "watermark": "CONTACT",
+              "watermark": "CONTACT US",
               "components": [
                 {
                   "key": "BreadcrumbSection",
@@ -288,11 +332,87 @@
                 "text": "Return to Base",
                 "href": "/"
               }
+            },
+            "service_detail": {
+              "title": "Service Detail | SecureTech",
+              "pageName": "Service Detail",
+              "metadata": {
+                "title": "Service Detail | SecureTech Cyber Security",
+                "description": "Comprehensive cyber security service overview, proactive threat intelligence, and enterprise-grade protection."
+              },
+              "watermark": "SERVICE DETAIL",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "ServiceDetailSection",
+                  "component": "ServiceDetail"
+                }
+              ]
+            },
+            "portfolio_detail": {
+              "title": "Portfolio Detail | SecureTech Cyber Security",
+              "pageName": "Portfolio Detail",
+              "metadata": {
+                "title": "Portfolio Detail | SecureTech Cyber Security",
+                "description": "Comprehensive cybersecurity project case study and detailed security implementation overview."
+              },
+              "watermark": "PORTFOLIO DETAIL",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "PortfolioDetailSection",
+                  "component": "PortfolioDetail"
+                }
+              ]
+            },
+            "blog_detail": {
+              "title": "Blog Detail | SecureTech Cyber Security",
+              "pageName": "Blog Detail",
+              "metadata": {
+                "title": "Blog Detail | SecureTech Cyber Security",
+                "description": "In-depth cybersecurity research, industry insights, and threat defense analysis."
+              },
+              "watermark": "BLOG DETAIL",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "BlogDetailSection",
+                  "component": "BlogDetail"
+                }
+              ]
+            },
+            "get_a_quote": {
+              "title": "Get A Quote | SecureTech Cyber Security",
+              "pageName": "Get A Quote",
+              "metadata": {
+                "title": "Get A Quote | SecureTech Cyber Security",
+                "description": "Tell us about your requirements and our team will provide you with a customized solution and pricing. Fill out the form below to get started."
+              },
+              "watermark": "GET A QUOTE",
+              "components": [
+                {
+                  "key": "BreadcrumbSection",
+                  "component": "Breadcrumb"
+                },
+                {
+                  "key": "GetAQuoteSection",
+                  "component": "GetAQuote"
+                }
+              ]
             }
           },
           "sections": {
             "breadcrumb": {
-              "background_image": "/images/soc-room.jpg",
+              "background_image": "/images/soc-room.webp",
               "background_alt": "SecureTech Cyber Security Center",
               "items": [
                 {
@@ -309,7 +429,7 @@
               "description": "Empowering enterprise security with next-generation threat intelligence, AI-assisted zero-trust infrastructure, and rapid incident response.",
               "cta_text": "Get a Quote",
               "cta_link": "/contact",
-              "image": "/images/hero-hacker.jpg",
+              "image": "/images/hero-hacker.webp",
               "image_alt": "Advanced Cyber Security specialist in high-tech digital control room"
             },
             "about": {
@@ -319,7 +439,7 @@
               "description": "We help businesses establish and maintain complete digital security with advanced technologies, expert guidance and proactive solutions to stay ahead of evolving cyber threats.",
               "button_text": "Learn More",
               "button_link": "/about",
-              "image": "/images/about-robot.jpg",
+              "image": "/images/about-robot.webp",
               "image_alt": "Futuristic cyber robotic hand touching digital holographic padlock shield",
               "badge": {
                 "icon": "shield-check",
@@ -328,38 +448,104 @@
               }
             },
             "soc_banner": {
-              "image": "/images/soc-room.jpg",
+              "image": "/images/soc-room.webp",
               "image_alt": "Security Operations Center with real-time global telemetry and multi-monitor threat display"
             },
             "services": {
               "eyebrow": "OUR SERVICES",
-              "wave_image": "/images/save-wave.png",
+              "wave_image": "/images/save-wave.webp",
               "wave_alt": "Glowing 3D neon cyber grid digital wave illustration",
               "badge_text": "OUR SERVICES",
               "items": [
                 {
-                  "id": "privacy",
-                  "title_regular": "Data privacy",
-                  "title_highlight": "program",
-                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDolore tellus, luctus nec ullamcorper consectetur.",
+                  "id": "managed-security-services",
+                  "title_regular": "Managed",
+                  "title_highlight": "Security Services",
+                  "description": "Proactive monitoring, threat detection and expert management to keep your business secure, 24/7.",
                   "link_text": "LEARN MORE",
-                  "link_href": "/services#privacy"
+                  "link_href": "/services/managed-security-services",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Managed Security Services"
                 },
                 {
-                  "id": "training",
-                  "title_regular": "Security awareness",
-                  "title_highlight": "training",
-                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDolore tellus, luctus nec ullamcorper consectetur.",
+                  "id": "cloud-security-solutions",
+                  "title_regular": "Cloud",
+                  "title_highlight": "Security Solutions",
+                  "description": "Protect multi-cloud environments, containers, and serverless architectures with robust defense mechanisms.",
                   "link_text": "LEARN MORE",
-                  "link_href": "/services#training"
+                  "link_href": "/services/cloud-security-solutions",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Cloud Security Solutions"
                 },
                 {
-                  "id": "safety",
-                  "title_regular": "Comprehensive",
-                  "title_highlight": "24/7 safety",
-                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nDolore tellus, luctus nec ullamcorper consectetur.",
+                  "id": "network-security-services",
+                  "title_regular": "Network",
+                  "title_highlight": "Security Services",
+                  "description": "Defend enterprise perimeter and internal networks against intrusions, DDoS attacks, and unauthorized access.",
                   "link_text": "LEARN MORE",
-                  "link_href": "/services#safety"
+                  "link_href": "/services/network-security-services",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Network Security Services"
+                },
+                {
+                  "id": "endpoint-security-management",
+                  "title_regular": "Endpoint",
+                  "title_highlight": "Security Management",
+                  "description": "Comprehensive protection for workstations, mobile devices, and servers against ransomware and malware.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services/endpoint-security-management",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Endpoint Security Management"
+                },
+                {
+                  "id": "data-protection-encryption",
+                  "title_regular": "Data Protection &",
+                  "title_highlight": "Encryption",
+                  "description": "Safeguard intellectual property, customer data, and sensitive records with advanced cryptographic controls.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services/data-protection-encryption",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Data Protection & Encryption"
+                },
+                {
+                  "id": "incident-response-recovery",
+                  "title_regular": "Incident Response &",
+                  "title_highlight": "Recovery",
+                  "description": "Rapid containment, digital forensics, and business continuity when security breaches occur.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services/incident-response-recovery",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Incident Response & Recovery"
+                },
+                {
+                  "id": "compliance-risk-management",
+                  "title_regular": "Compliance &",
+                  "title_highlight": "Risk Management",
+                  "description": "Navigate regulatory standards including ISO 27001, SOC 2, HIPAA, PCI-DSS, and NIST effortlessly.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services/compliance-risk-management",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Compliance & Risk Management"
+                },
+                {
+                  "id": "security-consulting",
+                  "title_regular": "Security",
+                  "title_highlight": "Consulting",
+                  "description": "Strategic cybersecurity leadership, vCISO advisory, and enterprise defense roadmapping.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services/security-consulting",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Security Consulting"
+                },
+                {
+                  "id": "vulnerability-assessment",
+                  "title_regular": "Vulnerability",
+                  "title_highlight": "Assessment",
+                  "description": "Discover, evaluate, and prioritize weaknesses across applications, APIs, networks, and cloud targets.",
+                  "link_text": "LEARN MORE",
+                  "link_href": "/services/vulnerability-assessment",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Vulnerability Assessment"
                 }
               ]
             },
@@ -395,9 +581,71 @@
                 }
               ]
             },
+            "about_process": {
+              "eyebrow": "OUR PROCESS",
+              "title_regular": "How We Work",
+              "title_highlight": "Step by Step",
+              "description": "We follow a structured and proven process to deliver the best cybersecurity solutions for your business.",
+              "steps": [
+                {
+                  "number": "01",
+                  "icon": "consultation",
+                  "title": "Consultation & Assessment",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                  "number": "02",
+                  "icon": "strategy",
+                  "title": "Strategy & Planning",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                  "number": "03",
+                  "icon": "implementation",
+                  "title": "Implementation",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                  "number": "04",
+                  "icon": "monitoring",
+                  "title": "Monitoring & Detection",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                  "number": "05",
+                  "icon": "response",
+                  "title": "Response & Recovery",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                },
+                {
+                  "number": "06",
+                  "icon": "improvement",
+                  "title": "Continuous Improvement",
+                  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                }
+              ]
+            },
+            "mission_vision": {
+              "mission": {
+                "eyebrow": "OUR MISSION",
+                "title_regular": "Our",
+                "title_highlight": "Mission",
+                "description": "Our mission is to deliver innovative and reliable cybersecurity solutions that protect businesses, people and data from evolving digital threats. We are committed to building a safer, more secure digital world through expertise, integrity and continuous innovation.",
+                "image": "/images/mission-shield.webp",
+                "image_alt": "Futuristic cyber shield hologram on hand"
+              },
+              "vision": {
+                "eyebrow": "OUR VISION",
+                "title_regular": "Our",
+                "title_highlight": "Vision",
+                "description": "Our vision is to be a global leader in cybersecurity, recognized for our commitment to innovation, trust and excellence. We aim to create a secure digital ecosystem where businesses can grow with confidence, free from cyber risks.",
+                "image": "/images/vision-eye.webp",
+                "image_alt": "Cyber biometric eye scanning HUD interface"
+              }
+            },
             "blog": {
               "eyebrow": "BLOG & ARTICLES",
-              "title_regular": "Find Useful Tips",
+              "title_regular": "Find Useful Tips In Our",
               "title_highlight": "Blog Posts",
               "description": "Explore expert insights, cybersecurity tips, industry trends and best practices to keep your business secure in the digital world.",
               "button_text": "View All Blog",
@@ -406,7 +654,7 @@
                 {
                   "id": "post-1",
                   "slug": "top-10-cyber-security-threats-2024",
-                  "image": "/images/blog-threats.jpg",
+                  "image": "/images/blog-threats.webp",
                   "image_alt": "Top 10 Cyber Security Threats Businesses Should Watch in 2024",
                   "category": "Cyber Security",
                   "title": "Top 10 Cyber Security Threats Businesses Should Watch in 2024",
@@ -417,7 +665,7 @@
                 {
                   "id": "post-2",
                   "slug": "how-to-create-a-strong-password-policy",
-                  "image": "/images/blog-password.jpg",
+                  "image": "/images/blog-password.webp",
                   "image_alt": "How to Create a Strong Password Policy for Your Organization",
                   "category": "Best Practices",
                   "title": "How to Create a Strong Password Policy for Your Organization",
@@ -428,7 +676,7 @@
                 {
                   "id": "post-3",
                   "slug": "key-strategies-to-secure-cloud-infrastructure",
-                  "image": "/images/blog-cloud.jpg",
+                  "image": "/images/blog-cloud.webp",
                   "image_alt": "Key Strategies to Secure Your Cloud Infrastructure",
                   "category": "Cloud Security",
                   "title": "Key Strategies to Secure Your Cloud Infrastructure",
@@ -439,7 +687,7 @@
                 {
                   "id": "post-4",
                   "slug": "the-role-of-threat-intelligence-modern-cyber-security",
-                  "image": "/images/blog-intel.jpg",
+                  "image": "/images/blog-intel.webp",
                   "image_alt": "The Role of Threat Intelligence in Modern Cyber Security",
                   "category": "Threat Intelligence",
                   "title": "The Role of Threat Intelligence in Modern Cyber Security",
@@ -488,63 +736,1280 @@
             },
             "contact": {
               "eyebrow": "CONTACT US",
-              "title_regular": "Get In Touch With Our",
-              "title_highlight": "Security Experts",
-              "description": "Contact our certified team of defensive analysts and ethical hackers for threat consultations, vulnerability tests, or emergency incident responses.",
-              "email": "support@securetech.com",
-              "phone": "+1 (123) 456-7890",
-              "address": "777 Cyber Defense Way, Suite 400, San Francisco, CA"
+              "title_regular": "How Can We",
+              "title_highlight": "Help?",
+              "description": "Get in touch with our cybersecurity experts. We're here to answer your questions, discuss your requirements, and provide the right solutions for your business.",
+              "email": "info@xyz.com",
+              "phone": "(+1) 1234567890",
+              "address": "123 Cyber Park Avenue, New York, NY 10001, USA",
+              "cards": [
+                {
+                  "id": "card-1",
+                  "title": "Help & Support",
+                  "description": "Our team is available to assist you with any queries.",
+                  "action_text": "Contact Support",
+                  "action_link": "#contact-form",
+                  "icon": "MessageSquare"
+                },
+                {
+                  "id": "card-2",
+                  "title": "Our Office",
+                  "line1": "123 Cyber Park Avenue,",
+                  "line2": "New York, NY 10001, USA",
+                  "action_text": "View Maps",
+                  "action_link": "https://maps.google.com/?q=123+Cyber+Park+Avenue+New+York+NY",
+                  "icon": "MapPin"
+                },
+                {
+                  "id": "card-3",
+                  "title": "Our Phone",
+                  "line1": "(+1) 1234567890",
+                  "line2": "Mon - Fri, 9:00 AM - 6:00 PM (EST)",
+                  "action_text": "Call Us Now",
+                  "action_link": "tel:+11234567890",
+                  "icon": "Phone"
+                },
+                {
+                  "id": "card-4",
+                  "title": "Our Email",
+                  "line1": "info@xyz.com",
+                  "line2": "We reply within 24 hours.",
+                  "action_text": "Send Email",
+                  "action_link": "mailto:info@xyz.com",
+                  "icon": "Mail"
+                }
+              ],
+              "form": {
+                "eyebrow": "SEND US A MESSAGE",
+                "title_regular": "Leave A",
+                "title_highlight": "Message",
+                "description": "Fill out the form below and our team will get back to you as soon as possible.",
+                "fields": {
+                  "name_placeholder": "Your Name",
+                  "email_placeholder": "Your Email",
+                  "phone_placeholder": "Your Phone",
+                  "subject_placeholder": "Your Subject",
+                  "message_placeholder": "Your Message"
+                },
+                "button_text": "Submit Message"
+              },
+              "map": {
+                "image": "/images/contact-map.webp",
+                "office_title": "Our Office",
+                "office_address_line1": "123 Cyber Park Avenue,",
+                "office_address_line2": "New York, NY 10001, USA",
+                "embed_url": "https://maps.google.com/maps?q=123+Cyber+Park+Avenue,+New+York,+NY+10001&t=&z=14&ie=UTF8&iwloc=&output=embed"
+              }
             },
             "faq": {
               "eyebrow": "FREQUENTLY ASKED QUESTIONS",
-              "title_regular": "Everything You Need To Know About",
-              "title_highlight": "Our Protection",
+              "title_regular": "Frequently Asked",
+              "title_highlight": "Questions",
               "items": [
                 {
-                  "question": "What is the typical response time during an active security incident?",
-                  "answer": "Our dedicated 24/7 SOC team responds within 15 minutes of any critical severity alert, providing immediate isolation and threat remediation."
+                  "id": "faq-1",
+                  "number": "01",
+                  "question": "What are Managed Security Services (MSS)?",
+                  "answer": "Managed Security Services (MSS) provide continuous monitoring, threat detection, incident response and proactive security management to protect your business from cyber threats. Our expert team, advanced tools and 24/7 monitoring help you stay secure and compliant."
                 },
                 {
-                  "question": "Can SecureTech integrate with our existing IT infrastructure?",
-                  "answer": "Yes. Our zero-trust agents and SIEM connectors integrate seamlessly with AWS, Azure, Google Cloud, hybrid on-prem networks, and Microsoft 365."
+                  "id": "faq-2",
+                  "number": "02",
+                  "question": "How do your cybersecurity services help my business?",
+                  "answer": "Our cybersecurity services protect your critical business assets, prevent costly downtime and data breaches, ensure industry compliance, and give you peace of mind so you can focus on growing your business."
                 },
                 {
-                  "question": "How often are vulnerability assessments conducted?",
-                  "answer": "We provide automated continuous daily scanning alongside deep manual penetration testing on a monthly or quarterly schedule depending on your tier."
+                  "id": "faq-3",
+                  "number": "03",
+                  "question": "What industries do you serve?",
+                  "answer": "We provide comprehensive cybersecurity solutions to healthcare, financial services, e-commerce, manufacturing, legal, education, technology, and government organizations worldwide."
                 },
                 {
-                  "question": "Do you provide regulatory compliance documentation?",
-                  "answer": "Yes, we support SOC 2 Type II, ISO 27001, HIPAA, GDPR, and PCI-DSS compliance audits with automated evidence reporting."
+                  "id": "faq-4",
+                  "number": "04",
+                  "question": "Do you provide 24/7 monitoring and support?",
+                  "answer": "Yes, our Security Operations Center (SOC) operates 24/7/365, actively monitoring network traffic, detecting anomalies, and responding instantly to potential security events."
+                },
+                {
+                  "id": "faq-5",
+                  "number": "05",
+                  "question": "What types of cyber threats do you protect against?",
+                  "answer": "We defend against ransomware, phishing, malware, zero-day vulnerabilities, insider threats, DDoS attacks, SQL injection, supply chain attacks, and advanced persistent threats (APTs)."
+                },
+                {
+                  "id": "faq-6",
+                  "number": "06",
+                  "question": "How quickly can you respond to a security incident?",
+                  "answer": "Our dedicated incident response team guarantees an initial triage within 15 minutes of any high or critical severity alert, immediately initiating threat containment."
+                },
+                {
+                  "id": "faq-7",
+                  "number": "07",
+                  "question": "Do you offer compliance and regulatory support?",
+                  "answer": "Yes, we assist organizations in meeting and maintaining compliance standards including HIPAA, GDPR, PCI-DSS, SOC 2 Type II, ISO 27001, and NIST frameworks."
+                },
+                {
+                  "id": "faq-8",
+                  "number": "08",
+                  "question": "Can you help with cloud security?",
+                  "answer": "Absolutely. We secure cloud infrastructure across AWS, Microsoft Azure, Google Cloud Platform (GCP), and hybrid environments with continuous posture management (CSPM)."
+                },
+                {
+                  "id": "faq-9",
+                  "number": "09",
+                  "question": "What makes your cybersecurity services different?",
+                  "answer": "We combine cutting-edge AI threat intelligence, 24/7 human SOC expertise, custom security architecture, proactive threat hunting, and rapid incident response tailored to your business needs."
+                },
+                {
+                  "id": "faq-10",
+                  "number": "10",
+                  "question": "How can I get started with your services?",
+                  "answer": "Getting started is simple. Contact our team to schedule an initial consultation and cybersecurity assessment. We will analyze your current posture and design a customized security roadmap."
                 }
               ]
             },
             "portfolio": {
-              "eyebrow": "PORTFOLIO & CASE STUDIES",
-              "title_regular": "Proven Defense Across",
-              "title_highlight": "Global Enterprises",
+              "eyebrow": "PORTFOLIO",
+              "title_regular": "Featured",
+              "title_highlight": "Security Projects",
               "items": [
                 {
-                  "id": "case-1",
-                  "title": "Global Fintech Zero-Trust Architecture",
-                  "category": "Financial Services",
-                  "result": "Zero Breaches, 99.999% Uptime",
-                  "image": "/images/blog-cloud.jpg"
+                  "id": "enterprise-cloud-security",
+                  "slug": "enterprise-cloud-security",
+                  "category": "CLOUD SECURITY",
+                  "title": "Enterprise Cloud Security",
+                  "description": "Implemented a multi-layered cloud security framework for a global enterprise.",
+                  "image": "/images/portfolio/portfolio-1.webp",
+                  "image_alt": "Enterprise Cloud Security Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/enterprise-cloud-security"
                 },
                 {
-                  "id": "case-2",
-                  "title": "Healthcare Network Ransomware Defense",
-                  "category": "Healthcare IT",
-                  "result": "100% Data Integrity Preserved",
-                  "image": "/images/soc-room.jpg"
+                  "id": "secure-network-infrastructure",
+                  "slug": "secure-network-infrastructure",
+                  "category": "NETWORK SECURITY",
+                  "title": "Secure Network Infrastructure",
+                  "description": "Designed and deployed a next-generation network security solution.",
+                  "image": "/images/portfolio/portfolio-2.webp",
+                  "image_alt": "Secure Network Infrastructure Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/secure-network-infrastructure"
                 },
                 {
-                  "id": "case-3",
-                  "title": "Critical Infrastructure Threat Hunting",
-                  "category": "Industrial Automation",
-                  "result": "Over 2,400 APTs Neutralized",
-                  "image": "/images/hero-hacker.jpg"
+                  "id": "endpoint-protection-rollout",
+                  "slug": "endpoint-protection-rollout",
+                  "category": "ENDPOINT SECURITY",
+                  "title": "Endpoint Protection Rollout",
+                  "description": "Deployed advanced endpoint security across 5,000+ devices.",
+                  "image": "/images/portfolio/portfolio-3.webp",
+                  "image_alt": "Endpoint Protection Rollout Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/endpoint-protection-rollout"
+                },
+                {
+                  "id": "24-7-threat-monitoring",
+                  "slug": "24-7-threat-monitoring",
+                  "category": "THREAT DETECTION",
+                  "title": "24/7 Threat Monitoring",
+                  "description": "Implemented a real-time threat detection and monitoring system.",
+                  "image": "/images/portfolio/portfolio-4.webp",
+                  "image_alt": "24/7 Threat Monitoring Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/24-7-threat-monitoring"
+                },
+                {
+                  "id": "data-encryption-compliance",
+                  "slug": "data-encryption-compliance",
+                  "category": "DATA PROTECTION",
+                  "title": "Data Encryption & Compliance",
+                  "description": "Implemented data encryption and compliance solutions for sensitive data.",
+                  "image": "/images/portfolio/portfolio-5.webp",
+                  "image_alt": "Data Encryption & Compliance Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/data-encryption-compliance"
+                },
+                {
+                  "id": "cyber-incident-response",
+                  "slug": "cyber-incident-response",
+                  "category": "INCIDENT RESPONSE",
+                  "title": "Cyber Incident Response",
+                  "description": "Managed and mitigated a large-scale security incident for a financial client.",
+                  "image": "/images/portfolio/portfolio-6.webp",
+                  "image_alt": "Cyber Incident Response Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/cyber-incident-response"
+                },
+                {
+                  "id": "regulatory-compliance",
+                  "slug": "regulatory-compliance",
+                  "category": "COMPLIANCE",
+                  "title": "Regulatory Compliance",
+                  "description": "Helped a healthcare client achieve industry compliance standards.",
+                  "image": "/images/portfolio/portfolio-7.webp",
+                  "image_alt": "Regulatory Compliance Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/regulatory-compliance"
+                },
+                {
+                  "id": "security-assessment",
+                  "slug": "security-assessment",
+                  "category": "SECURITY CONSULTING",
+                  "title": "Security Assessment",
+                  "description": "Conducted a comprehensive security assessment and risk analysis.",
+                  "image": "/images/portfolio/portfolio-8.webp",
+                  "image_alt": "Security Assessment Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/security-assessment"
+                },
+                {
+                  "id": "critical-infrastructure-security",
+                  "slug": "critical-infrastructure-security",
+                  "category": "INDUSTRY SOLUTION",
+                  "title": "Critical Infrastructure Security",
+                  "description": "Delivered a customized security solution for industrial operations.",
+                  "image": "/images/portfolio/portfolio-9.webp",
+                  "image_alt": "Critical Infrastructure Security Project",
+                  "link_text": "View Project",
+                  "link_href": "/portfolio/critical-infrastructure-security"
                 }
               ]
+            },
+            "service_detail": {
+              "sidebar_title": "Our Services",
+              "services": [
+                {
+                  "slug": "managed-security-services",
+                  "name": "Managed Security Services",
+                  "sidebar_icon": "shield-check",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Managed",
+                  "title_highlight": "Security Services",
+                  "subtitle": "Proactive monitoring, threat detection and expert management to keep your business secure, 24/7.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Security analyst monitoring cyber threats in SOC operations center",
+                  "paragraphs": [
+                    "Our Managed Security Services (MSS) provide end-to-end protection for your IT infrastructure, ensuring continuous monitoring, threat detection, incident response and proactive risk management. With our expert team and advanced tools, we help you stay ahead of evolving cyber threats while you focus on growing your business.",
+                    "From real-time threat monitoring to rapid incident response, our tailored security solutions are designed to protect your data, systems and users across your entire digital environment."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Built In Benefits for",
+                  "benefits_title_highlight": "Better Protection",
+                  "benefits_description": "Our managed security services come with integrated benefits that strengthen your security posture, simplify operations and ensure your business is prepared for future challenges.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "24/7 Monitoring",
+                      "description": "Continuous monitoring of your systems and networks to detect and respond to threats in real time."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Threat Detection",
+                      "description": "Advanced threat intelligence to identify and block cyber threats before they cause harm."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Incident Response",
+                      "description": "Quick and effective response to security incidents to minimize damage and downtime."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Compliance Support",
+                      "description": "Assistance in meeting industry regulations and compliance requirements."
+                    }
+                  ]
+                },
+                {
+                  "slug": "cloud-security-solutions",
+                  "name": "Cloud Security Solutions",
+                  "sidebar_icon": "cloud",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Cloud",
+                  "title_highlight": "Security Solutions",
+                  "subtitle": "Protect multi-cloud environments, containers, and serverless architectures with robust defense mechanisms.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Cloud cyber security architecture and data protection",
+                  "paragraphs": [
+                    "Our Cloud Security Solutions provide complete visibility and defense across public, private, and hybrid cloud infrastructures. We safeguard workloads, applications, and confidential data against unauthorized access, configuration drift, and sophisticated cyber exploits.",
+                    "By integrating automated compliance posture management and zero-trust verification, we empower your enterprise to innovate in the cloud securely and at speed."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Next-Gen Defense for",
+                  "benefits_title_highlight": "Cloud Workloads",
+                  "benefits_description": "Experience effortless cloud adoption backed by continuous posture monitoring, automated remediation, and zero-trust policy enforcement.",
+                  "benefits": [
+                    {
+                      "icon": "cloud",
+                      "title": "Multi-Cloud Visibility",
+                      "description": "Unified dashboard monitoring AWS, Azure, and Google Cloud environments seamlessly."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Zero-Trust Access",
+                      "description": "Strict identity-based access control and micro-segmentation across all cloud assets."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Automated Remediation",
+                      "description": "Instant correction of security misconfigurations before attackers can exploit them."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Continuous Compliance",
+                      "description": "Real-time alignment with CIS benchmarks, SOC 2, HIPAA, and GDPR standards."
+                    }
+                  ]
+                },
+                {
+                  "slug": "network-security-services",
+                  "name": "Network Security Services",
+                  "sidebar_icon": "network",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Network",
+                  "title_highlight": "Security Services",
+                  "subtitle": "Defend enterprise perimeter and internal networks against intrusions, DDoS attacks, and unauthorized access.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Enterprise network security telemetry and intrusion prevention",
+                  "paragraphs": [
+                    "Our Network Security Services deliver next-generation firewall protection, deep packet inspection, and intrusion prevention systems (IPS) tailored to modern distributed architectures.",
+                    "We isolate threat vectors, enforce granular traffic policies, and ensure uninterrupted data flow with military-grade encryption and adaptive perimeter control."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Impenetrable Defense for",
+                  "benefits_title_highlight": "Your Infrastructure",
+                  "benefits_description": "Safeguard every packet traversing your network with intelligent threat isolation and zero latency overhead.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "Intrusion Prevention",
+                      "description": "Proactively intercept zero-day malware and lateral movements across network segments."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "DDoS Mitigation",
+                      "description": "High-capacity mitigation that absorbs massive distributed denial-of-service attacks."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Encrypted Tunnels",
+                      "description": "Secure site-to-site and remote-access VPN infrastructure with quantum-resistant crypto."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Bandwidth Optimization",
+                      "description": "Granular traffic shaping that prioritizes critical business services without compromise."
+                    }
+                  ]
+                },
+                {
+                  "slug": "endpoint-security-management",
+                  "name": "Endpoint Security Management",
+                  "sidebar_icon": "monitor",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Endpoint",
+                  "title_highlight": "Security Management",
+                  "subtitle": "Comprehensive protection for workstations, mobile devices, and servers against ransomware and malware.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Endpoint detection and response monitoring dashboard",
+                  "paragraphs": [
+                    "Every device connected to your network is a potential doorway for attackers. Our Endpoint Security Management pairs behavioral analysis with real-time containment to neutralize threats on laptops, desktops, and mobile hardware.",
+                    "With centralized patch deployment and automated rollback capabilities, we ensure your endpoints stay shielded without disrupting user productivity."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Total Endpoint Defense for",
+                  "benefits_title_highlight": "Distributed Teams",
+                  "benefits_description": "Protect remote, hybrid, and on-premises workforce endpoints with lightweight intelligent agents.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "EDR & XDR Capabilities",
+                      "description": "Deep endpoint telemetry providing rapid root-cause investigation and threat containment."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Ransomware Rollback",
+                      "description": "Instant cryptographic isolation and file restoration during suspicious encryption attempts."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Lightweight Agents",
+                      "description": "Minimal CPU footprint ensuring zero lag or battery drain across all devices."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Automated Patching",
+                      "description": "Continuous vulnerability patching to eliminate software security flaws rapidly."
+                    }
+                  ]
+                },
+                {
+                  "slug": "data-protection-encryption",
+                  "name": "Data Protection & Encryption",
+                  "sidebar_icon": "database",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Data Protection &",
+                  "title_highlight": "Encryption",
+                  "subtitle": "Safeguard intellectual property, customer data, and sensitive records with advanced cryptographic controls.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Data protection and encryption cryptographic vault",
+                  "paragraphs": [
+                    "Data is the core asset of your modern organization. Our Data Protection & Encryption services implement robust Data Loss Prevention (DLP), hardware security module (HSM) key lifecycle management, and transparent database encryption.",
+                    "We protect data at rest, data in transit, and data in use, making sure that even if physical or digital breaches occur, your sensitive information remains unreadable and secure."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Military-Grade Privacy for",
+                  "benefits_title_highlight": "Critical Assets",
+                  "benefits_description": "End-to-end cryptographic protection guaranteeing complete sovereignty over your proprietary enterprise records.",
+                  "benefits": [
+                    {
+                      "icon": "database",
+                      "title": "Transparent Encryption",
+                      "description": "Seamless AES-256 encryption across file systems, storage buckets, and relational databases."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Data Loss Prevention",
+                      "description": "Intelligent content inspection preventing accidental leakage or unauthorized exfiltration."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Key Vault Management",
+                      "description": "Full lifecycle management of encryption keys backed by FIPS 140-2 Level 3 hardware."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Access Governance",
+                      "description": "Role-based and attribute-based permissions ensuring strictly verified access."
+                    }
+                  ]
+                },
+                {
+                  "slug": "incident-response-recovery",
+                  "name": "Incident Response & Recovery",
+                  "sidebar_icon": "settings",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Incident Response &",
+                  "title_highlight": "Recovery",
+                  "subtitle": "Rapid containment, digital forensics, and business continuity when security breaches occur.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Incident response tactical operations room",
+                  "paragraphs": [
+                    "When an incident strikes, seconds matter. Our dedicated Incident Response & Recovery team stands ready 24/7 to contain intrusions, eradicate threat actors, and conduct thorough digital forensic analysis.",
+                    "We assist your organization from the first alert through full post-incident remediation, ensuring business operations are restored swiftly with rock-solid evidence preservation."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Rapid Containment for",
+                  "benefits_title_highlight": "Zero Downtime",
+                  "benefits_description": "Battle-tested incident handlers offering guaranteed SLA response times to minimize financial and reputational impact.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "15-Minute SLA",
+                      "description": "Guaranteed rapid mobilization of elite forensic investigators and threat hunters."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Digital Forensics",
+                      "description": "Thorough timeline reconstruction and artifact preservation for legal & regulatory compliance."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Eradication & Restore",
+                      "description": "Total removal of malicious persistence mechanisms and secure restore of operations."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Post-Mortem Reports",
+                      "description": "Actionable post-incident remediation roadmaps to prevent future recurrence."
+                    }
+                  ]
+                },
+                {
+                  "slug": "compliance-risk-management",
+                  "name": "Compliance & Risk Management",
+                  "sidebar_icon": "file-text",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Compliance &",
+                  "title_highlight": "Risk Management",
+                  "subtitle": "Navigate regulatory standards including ISO 27001, SOC 2, HIPAA, PCI-DSS, and NIST effortlessly.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Compliance and regulatory security governance dashboard",
+                  "paragraphs": [
+                    "Navigating modern regulatory mandates requires deep expertise and continuous governance. Our Compliance & Risk Management team conducts comprehensive readiness assessments, gap analyses, and policy drafting.",
+                    "We transform compliance from a burdensome annual checkbox into an automated, continuous security advantage that builds lasting trust with your clients and partners."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Auditable Security for",
+                  "benefits_title_highlight": "Total Compliance",
+                  "benefits_description": "Streamline audit cycles and satisfy stakeholder inquiries with continuous automated compliance tracking.",
+                  "benefits": [
+                    {
+                      "icon": "file-text",
+                      "title": "Audit Readiness",
+                      "description": "Pre-audit assessments and evidence collection ensuring effortless certification passes."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Framework Alignment",
+                      "description": "Direct mapping across NIST CSF, ISO 27001, SOC 2, HIPAA, and GDPR frameworks."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Risk Scoring Matrix",
+                      "description": "Executive risk dashboards highlighting operational vulnerabilities and remediation priorities."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Third-Party Risk",
+                      "description": "Systematic vendor risk evaluations to secure your supply chain ecosystem."
+                    }
+                  ]
+                },
+                {
+                  "slug": "security-consulting",
+                  "name": "Security Consulting",
+                  "sidebar_icon": "users",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Security",
+                  "title_highlight": "Consulting",
+                  "subtitle": "Strategic cybersecurity leadership, vCISO advisory, and enterprise defense roadmapping.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Cyber security strategic consultation and executive advisory",
+                  "paragraphs": [
+                    "Our Security Consulting services provide high-level strategic guidance from seasoned CISOs and security architects. Whether you need a virtual CISO (vCISO), an architecture review, or cloud transformation security guidance, we tailor our expertise to your business objectives.",
+                    "We help executives and IT leaders align security investments with revenue goals, reducing exposure while enabling seamless digital innovation."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Executive Advisory for",
+                  "benefits_title_highlight": "Strategic Defense",
+                  "benefits_description": "Leverage enterprise-grade cybersecurity leadership without the overhead of a full-time executive team.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "Virtual CISO (vCISO)",
+                      "description": "Experienced board-level cybersecurity direction tailored to your corporate goals."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Security Architecture",
+                      "description": "Design reviews and zero-trust engineering for on-prem and cloud environments."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "Cyber Maturity",
+                      "description": "Benchmark your defense posture against industry peers and global standards."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Budget Optimization",
+                      "description": "Strategic allocation of security spend to maximize risk reduction ROI."
+                    }
+                  ]
+                },
+                {
+                  "slug": "vulnerability-assessment",
+                  "name": "Vulnerability Assessment",
+                  "sidebar_icon": "search",
+                  "eyebrow": "SERVICE OVERVIEW",
+                  "title_regular": "Vulnerability",
+                  "title_highlight": "Assessment",
+                  "subtitle": "Discover, evaluate, and prioritize weaknesses across applications, APIs, networks, and cloud targets.",
+                  "image": "/images/soc-room.webp",
+                  "image_alt": "Vulnerability scanning and penetration testing reconnaissance",
+                  "paragraphs": [
+                    "Proactive vulnerability assessment and penetration testing (VAPT) identify security flaws before malicious actors find them. Our offensive security engineers simulate real-world attacks to uncover logic flaws, misconfigurations, and software vulnerabilities.",
+                    "We provide clear, prioritized remediation instructions that help development and infrastructure teams fix critical flaws quickly and decisively."
+                  ],
+                  "benefits_eyebrow": "KEY BENEFITS",
+                  "benefits_title_regular": "Offensive Testing for",
+                  "benefits_title_highlight": "Proactive Security",
+                  "benefits_description": "Uncover hidden attack paths and logic flaws with rigorous automated scanning and manual penetration testing.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "Automated Scanning",
+                      "description": "Continuous vulnerability scanning across web apps, APIs, networks, and cloud assets."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Manual Pen Testing",
+                      "description": "Ethical hacking simulating sophisticated threat actors to discover complex business logic flaws."
+                    },
+                    {
+                      "icon": "settings",
+                      "title": "CVSS Prioritization",
+                      "description": "Contextual risk scoring so engineering teams fix the most exploitable issues first."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Free Retesting",
+                      "description": "Comprehensive verification scans to validate that patched vulnerabilities are sealed."
+                    }
+                  ]
+                }
+              ]
+            },
+            "portfolio_detail": {
+              "sidebar_title": "Our Portfolio",
+              "services": [
+                {
+                  "slug": "enterprise-cloud-security",
+                  "name": "Enterprise Cloud Security",
+                  "sidebar_icon": "cloud",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Enterprise Cloud",
+                  "title_highlight": "Security Architecture",
+                  "subtitle": "Implemented a multi-layered cloud security framework for a global enterprise.",
+                  "image": "/images/portfolio/portfolio-1.webp",
+                  "image_alt": "Enterprise Cloud Security Architecture",
+                  "paragraphs": [
+                    "For this global enterprise, SecureTech designed and deployed a comprehensive zero-trust multi-cloud architecture spanning AWS, Azure, and private cloud data centers. The engagement focused on automated identity governance, posture management, and seamless workload isolation.",
+                    "By integrating continuous container runtime security, least-privilege IAM policies, and cloud-native microsegmentation, we achieved zero unauthorized lateral movements and cut cloud compliance audit times by 75%."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Delivered Measurable",
+                  "benefits_title_highlight": "Protection Impact",
+                  "benefits_description": "Our enterprise cloud implementation provided hardened cloud perimeters, real-time threat response, and frictionless developer velocity.",
+                  "benefits": [
+                    {
+                      "icon": "cloud",
+                      "title": "Zero-Trust Mesh",
+                      "description": "Automated identity federation and strict mutual TLS communication across hybrid clouds."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Posture Management",
+                      "description": "Real-time CSPM scans identifying and auto-remediating misconfigurations in under 60 seconds."
+                    },
+                    {
+                      "icon": "lock",
+                      "title": "Encrypted Workloads",
+                      "description": "Customer-managed KMS encryption at rest and in transit across all databases and storage tiers."
+                    },
+                    {
+                      "icon": "activity",
+                      "title": "Runtime Auditing",
+                      "description": "Kernel-level eBPF behavioral telemetry detecting container anomalies and drift instantly."
+                    }
+                  ]
+                },
+                {
+                  "slug": "secure-network-infrastructure",
+                  "name": "Secure Network Infrastructure",
+                  "sidebar_icon": "network",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Next-Generation",
+                  "title_highlight": "Network Infrastructure",
+                  "subtitle": "Designed and deployed a next-generation network security solution.",
+                  "image": "/images/portfolio/portfolio-2.webp",
+                  "image_alt": "Secure Network Infrastructure Deployment",
+                  "paragraphs": [
+                    "SecureTech modernized the enterprise wide-area network by implementing software-defined perimeter (SD-WAN) and next-generation firewalls (NGFW) with deep packet inspection.",
+                    "The architecture fully isolated operational technology (OT) from corporate networks, preventing unauthorized lateral movement while guaranteeing 99.999% uptime for core financial transaction processing."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "High-Speed Perimeter",
+                  "benefits_title_highlight": "Defense & Integrity",
+                  "benefits_description": "Engineered high-throughput threat prevention without impacting ultra-low latency operational requirements.",
+                  "benefits": [
+                    {
+                      "icon": "network",
+                      "title": "Deep Packet Inspection",
+                      "description": "Line-rate SSL/TLS traffic decryption uncovering hidden malware without degrading throughput."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Micro-Segmentation",
+                      "description": "Hardware-enforced VLAN zoning preventing rogue device discovery across corporate subnets."
+                    },
+                    {
+                      "icon": "cpu",
+                      "title": "SD-WAN Orchestration",
+                      "description": "Dynamic path selection and automated IPsec tunnel failover across 40+ branch offices."
+                    },
+                    {
+                      "icon": "activity",
+                      "title": "Zero Packet Loss",
+                      "description": "High-availability clustering delivering uninterrupted 99.999% network continuity."
+                    }
+                  ]
+                },
+                {
+                  "slug": "endpoint-protection-rollout",
+                  "name": "Endpoint Protection Rollout",
+                  "sidebar_icon": "monitor",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Enterprise-Scale",
+                  "title_highlight": "Endpoint Protection",
+                  "subtitle": "Deployed advanced endpoint security across 5,000+ devices.",
+                  "image": "/images/portfolio/portfolio-3.webp",
+                  "image_alt": "Endpoint Protection Rollout Deployment",
+                  "paragraphs": [
+                    "Over a 90-day phased execution, SecureTech deployed AI-driven Endpoint Detection and Response (EDR) agents across 5,000+ distributed enterprise workstations, executive laptops, and data center servers.",
+                    "The new platform replaced legacy signature antivirus with behavioral heuristic models, stopping fileless attacks, memory injection exploits, and ransomware execution in milliseconds."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Autonomous Machine-Speed",
+                  "benefits_title_highlight": "Device Protection",
+                  "benefits_description": "Continuous behavioral surveillance protecting distributed employees whether on-premises or remote.",
+                  "benefits": [
+                    {
+                      "icon": "monitor",
+                      "title": "5,000+ Endpoints",
+                      "description": "Unified console orchestrating unified fleet visibility with automated patch health compliance."
+                    },
+                    {
+                      "icon": "zap",
+                      "title": "Sub-Second Isolation",
+                      "description": "Automated network quarantine of infected hosts stopping lateral contagion immediately."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Anti-Ransomware Canary",
+                      "description": "Cryptographic honey-files detecting unauthorized encryption and reverting encrypted files."
+                    },
+                    {
+                      "icon": "activity",
+                      "title": "24/7 Telemetry Stream",
+                      "description": "Direct telemetry ingest into SOC SIEM enabling rapid forensic root-cause analysis."
+                    }
+                  ]
+                },
+                {
+                  "slug": "24-7-threat-monitoring",
+                  "name": "24/7 Threat Monitoring",
+                  "sidebar_icon": "shield-check",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "24/7 Real-Time",
+                  "title_highlight": "Threat Monitoring",
+                  "subtitle": "Implemented a real-time threat detection and monitoring system.",
+                  "image": "/images/portfolio/portfolio-4.webp",
+                  "image_alt": "24/7 SOC Threat Monitoring",
+                  "paragraphs": [
+                    "SecureTech established a dedicated 24/7 Security Operations Center (SOC) pipeline integrating modern SIEM, threat hunting playbooks, and SOAR automation to ingest over 40 million daily events.",
+                    "By applying machine-learning correlation rules, false positives dropped by 82%, allowing tier-3 security engineers to pinpoint Advanced Persistent Threats (APTs) and active adversary probes in under 4 minutes."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Vigilant Continuous",
+                  "benefits_title_highlight": "Enterprise Coverage",
+                  "benefits_description": "Round-the-clock eyes on glass backed by elite cyber analysts and automated response playbooks.",
+                  "benefits": [
+                    {
+                      "icon": "shield-check",
+                      "title": "24/7/365 SOC",
+                      "description": "Constant human and AI oversight guaranteeing no off-hours or weekend detection blindspots."
+                    },
+                    {
+                      "icon": "activity",
+                      "title": "< 4 Min MTTD",
+                      "description": "Ultra-fast mean time to detection across network, host, and cloud telemetry streams."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Threat Intelligence Feed",
+                      "description": "Live ingestion of global indicators of compromise (IoCs) and zero-day threat bulletins."
+                    },
+                    {
+                      "icon": "zap",
+                      "title": "SOAR Playbooks",
+                      "description": "Automated blocking of malicious IPs, credential revocations, and firewall updates."
+                    }
+                  ]
+                },
+                {
+                  "slug": "data-encryption-compliance",
+                  "name": "Data Encryption & Compliance",
+                  "sidebar_icon": "lock",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Data Encryption &",
+                  "title_highlight": "Compliance Architecture",
+                  "subtitle": "Implemented data encryption and compliance solutions for sensitive data.",
+                  "image": "/images/portfolio/portfolio-5.webp",
+                  "image_alt": "Data Encryption and Compliance Project",
+                  "paragraphs": [
+                    "We deployed military-grade envelope encryption and hardware security module (HSM) key lifecycle management across transactional relational databases, unstructured storage, and analytics clusters.",
+                    "This architecture safeguarded over 20 million customer records and critical proprietary assets, ensuring full alignment with GDPR, HIPAA, and PCI-DSS requirements without reducing query throughput."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Cryptographic Sovereignty for",
+                  "benefits_title_highlight": "Enterprise Records",
+                  "benefits_description": "Robust cryptographic lifecycle controls preserving total data confidentiality across all operational tiers.",
+                  "benefits": [
+                    {
+                      "icon": "lock",
+                      "title": "AES-256 Envelope",
+                      "description": "Transparent column-level and file-system encryption with automated key rotation cycles."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "HSM Key Custody",
+                      "description": "FIPS 140-2 Level 3 certified hardware security modules guaranteeing non-exportable master keys."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Data Loss Prevention",
+                      "description": "Heuristic DLP inspection blocking accidental exfiltration of confidential customer data."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Audit-Ready Logs",
+                      "description": "Immutable key-access event trails satisfying global regulatory compliance mandates."
+                    }
+                  ]
+                },
+                {
+                  "slug": "cyber-incident-response",
+                  "name": "Cyber Incident Response",
+                  "sidebar_icon": "activity",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Rapid Cyber",
+                  "title_highlight": "Incident Response",
+                  "subtitle": "Managed and mitigated a large-scale security incident for a financial client.",
+                  "image": "/images/portfolio/portfolio-6.webp",
+                  "image_alt": "Cyber Incident Response Operations",
+                  "paragraphs": [
+                    "When a financial services institution experienced an active adversary credential stuffing and lateral movement breach, SecureTech emergency team mobilized within 15 minutes.",
+                    "Our specialists isolated compromised segments, identified adversary persistence mechanisms, and eradicated all implants without data leakage or business disruption, restoring trusted production operations safely."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "High-Stakes Containment &",
+                  "benefits_title_highlight": "Clean Recovery",
+                  "benefits_description": "Battle-tested forensic investigation, adversary eradication, and legally defensible recovery.",
+                  "benefits": [
+                    {
+                      "icon": "zap",
+                      "title": "15-Min Mobilization",
+                      "description": "Immediate deployment of incident commander and elite digital forensics examiners."
+                    },
+                    {
+                      "icon": "search",
+                      "title": "Adversary TTP Tracking",
+                      "description": "Mapping attack lifecycle against MITRE ATT&CK matrix to uncover every backdoor."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Zero Ransom Paid",
+                      "description": "Complete data recovery from uncorrupted immutable backups without rewarding attackers."
+                    },
+                    {
+                      "icon": "file-text",
+                      "title": "Forensic Post-Mortem",
+                      "description": "Comprehensive root-cause post-mortem with actionable defensive hardening roadmap."
+                    }
+                  ]
+                },
+                {
+                  "slug": "regulatory-compliance",
+                  "name": "Regulatory Compliance",
+                  "sidebar_icon": "file-text",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Healthcare Regulatory",
+                  "title_highlight": "Compliance Program",
+                  "subtitle": "Helped a healthcare client achieve industry compliance standards.",
+                  "image": "/images/portfolio/portfolio-7.webp",
+                  "image_alt": "Healthcare Regulatory Compliance Program",
+                  "paragraphs": [
+                    "SecureTech partnered with a major healthcare network to conduct a complete gap analysis and control mapping across ISO 27001, HIPAA Security Rule, and SOC 2 Type II governance frameworks.",
+                    "We established policy automation, role-based access validation, and continuous posture monitoring, leading to a flawless first-time SOC 2 Type II certification and 100% HIPAA compliance verification."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Comprehensive Compliance &",
+                  "benefits_title_highlight": "Risk Assurance",
+                  "benefits_description": "Transforming complex security compliance mandates into automated, audit-ready operational evidence.",
+                  "benefits": [
+                    {
+                      "icon": "file-text",
+                      "title": "SOC 2 Type II Certified",
+                      "description": "Flawless unqualified audit report achieved with zero major control exceptions."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "HIPAA Safeguards",
+                      "description": "End-to-end ePHI access controls, audit trail logging, and business associate governance."
+                    },
+                    {
+                      "icon": "database",
+                      "title": "Continuous Evidence Ingest",
+                      "description": "Automated compliance tooling eliminating manual spreadsheet evidence collection."
+                    },
+                    {
+                      "icon": "users",
+                      "title": "Staff Security Training",
+                      "description": "Role-specific compliance training achieving 98% security awareness assessment scores."
+                    }
+                  ]
+                },
+                {
+                  "slug": "security-assessment",
+                  "name": "Security Assessment",
+                  "sidebar_icon": "search",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Comprehensive Security",
+                  "title_highlight": "Assessment & Red Teaming",
+                  "subtitle": "Conducted a comprehensive security assessment and risk analysis.",
+                  "image": "/images/portfolio/portfolio-8.webp",
+                  "image_alt": "Security Assessment and Red Teaming",
+                  "paragraphs": [
+                    "Our ethical hacking offensive team performed an exhaustive multi-vector assessment, combining external black-box penetration testing, internal active directory auditing, and social engineering exercises.",
+                    "We uncovered 14 critical vulnerability chains before malicious threat actors could exploit them, delivering executive-level risk heatmaps alongside clear engineering remediation scripts."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Actionable Intelligence for",
+                  "benefits_title_highlight": "Vulnerability Remediation",
+                  "benefits_description": "Uncompromising offensive adversarial testing providing clarity on your true defense posture.",
+                  "benefits": [
+                    {
+                      "icon": "search",
+                      "title": "Full-Scope Penetration",
+                      "description": "Simulated state-sponsored APT attacks targeting web apps, APIs, and cloud networks."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Active Directory Audit",
+                      "description": "Identification of toxic privilege relationships, Kerberoasting paths, and unconstrained delegation."
+                    },
+                    {
+                      "icon": "zap",
+                      "title": "Remediation Playbooks",
+                      "description": "Prioritized CVSS-scored recommendations with exact configuration code patches."
+                    },
+                    {
+                      "icon": "check-circle",
+                      "title": "Re-Test Verification",
+                      "description": "Secondary assessment verifying 100% closure of identified critical vulnerabilities."
+                    }
+                  ]
+                },
+                {
+                  "slug": "critical-infrastructure-security",
+                  "name": "Critical Infrastructure Security",
+                  "sidebar_icon": "cpu",
+                  "eyebrow": "PORTFOLIO OVERVIEW",
+                  "title_regular": "Critical Infrastructure",
+                  "title_highlight": "& Industrial Security",
+                  "subtitle": "Delivered a customized security solution for industrial operations.",
+                  "image": "/images/portfolio/portfolio-9.webp",
+                  "image_alt": "Critical Infrastructure Industrial Security",
+                  "paragraphs": [
+                    "SecureTech deployed dedicated operational technology (OT) and SCADA cybersecurity protections for high-consequence industrial facilities, manufacturing plants, and municipal utility control systems.",
+                    "Our air-gapped monitoring, unidirectional security gateways, and protocol anomaly detection (Modbus, DNP3, OPC-UA) stopped industrial malware without interrupting sensitive physical control loops."
+                  ],
+                  "benefits_eyebrow": "KEY DELIVERABLES",
+                  "benefits_title_regular": "Resilient Defense for",
+                  "benefits_title_highlight": "Industrial Operations",
+                  "benefits_description": "Purdue-model architectural protection safeguarding physical automation and industrial control assets.",
+                  "benefits": [
+                    {
+                      "icon": "cpu",
+                      "title": "SCADA/ICS Protection",
+                      "description": "Deep packet analysis for proprietary industrial protocols safeguarding PLC logic controllers."
+                    },
+                    {
+                      "icon": "shield-check",
+                      "title": "Purdue Model Zoning",
+                      "description": "Strict demilitarized zones isolating Level 3 enterprise IT from Level 1/2 real-time OT."
+                    },
+                    {
+                      "icon": "lock",
+                      "title": "Unidirectional Data Diodes",
+                      "description": "Hardware-enforced physical one-way data conduits preventing remote network access."
+                    },
+                    {
+                      "icon": "activity",
+                      "title": "Zero Production Downtime",
+                      "description": "Passive non-intrusive monitoring ensuring 100% continuous plant operational safety."
+                    }
+                  ]
+                }
+              ]
+            },
+            "blog_detail": {
+              "posts": [
+                {
+                  "id": "post-1",
+                  "slug": "top-10-cyber-security-threats-2024",
+                  "category": "Threat Intelligence",
+                  "title_regular": "Top 10 Cyber Security Threats ",
+                  "title_highlight": "Businesses Should Watch",
+                  "title_suffix": " in 2024",
+                  "author": {
+                    "name": "Sarah Jenkins",
+                    "role": "Lead Threat Researcher"
+                  },
+                  "published_date": "October 12, 2024",
+                  "intro_paragraph": "As corporate digital footprints expand with multi-cloud adoption and generative AI integration, malicious adversaries are deploying increasingly automated attack surfaces. Staying vigilant requires proactive threat hunting rather than reactive remediation.",
+                  "hero_image": "/images/blog-threats.webp",
+                  "hero_image_alt": "Top 10 Cyber Security Threats 2024",
+                  "body_paragraphs": [
+                    "From sophisticated ransomware-as-a-service (RaaS) operations to supply chain software compromises, today’s threat vectors bypass traditional perimeter filters. Organizations must enforce strict zero-trust identity policies and deep endpoint telemetry.",
+                    "Continuous vulnerability assessments and automated patching lifecycles are no longer optional. Modern threat management hinges on rapid containment before adversaries achieve lateral movement inside enterprise networks."
+                  ],
+                  "quote": {
+                    "quote": "“Security is not a product, but a process. It is a continuous practice of vigilance, posture assessment, and swift adversarial counter-measures.”",
+                    "author": "Bruce Schneier",
+                    "image": "/images/blog/blog-quote-hacker.webp"
+                  },
+                  "subheading_regular": "Emerging Adversarial Vectors: ",
+                  "subheading_highlight": "AI-Powered Exploitation",
+                  "subheading_paragraph": "Threat actors are actively leveraging autonomous vulnerability scanners and natural language deepfakes to craft hyper-convincing executive phishing lures. Defending against these campaigns demands AI-driven anomaly detection engines.",
+                  "checklist_title_regular": "Key Defensive ",
+                  "checklist_title_highlight": "Countermeasures",
+                  "checklist_items": [
+                    "Automated Ransomware Canary Files",
+                    "Strict Phishing-Resistant MFA",
+                    "Zero-Day Exploit Intelligence Feeds",
+                    "Continuous Attack Surface Management",
+                    "Hardware-Enforced Cryptographic Vaults",
+                    "Air-Gapped Immutable Backup Validation"
+                  ],
+                  "secondary_image": "/images/soc-room.webp",
+                  "secondary_image_alt": "SOC operations monitoring critical threats"
+                },
+                {
+                  "id": "post-2",
+                  "slug": "how-to-create-a-strong-password-policy",
+                  "category": "Cyber Hygiene",
+                  "title_regular": "How to Create a Strong ",
+                  "title_highlight": "Password & Identity Policy",
+                  "title_suffix": " for Your Organization",
+                  "author": {
+                    "name": "Michael Chang",
+                    "role": "Identity Architect"
+                  },
+                  "published_date": "August 28, 2024",
+                  "intro_paragraph": "Weak credentials and compromised passwords remain the primary entry point for unauthorized enterprise network intrusions. Transitioning to modern authentication standards is the foundation of digital sovereignty.",
+                  "hero_image": "/images/blog-password.webp",
+                  "hero_image_alt": "How to Create a Strong Password Policy",
+                  "body_paragraphs": [
+                    "Arbitrary 90-day password rotation rules often encourage employees to choose predictable variants. Modern NIST guidelines emphasize passphrases, credential stuffing defense, and multi-factor authenticator app integration.",
+                    "Enterprises must eliminate single-point password dependencies by mandating biometric passkeys and FIDO2 hardware tokens for all privileged and administrative accounts."
+                  ],
+                  "quote": {
+                    "quote": "“Passwords are like chewing gum: do not leave them on the computer, do not let anyone else use them, and change them when they lose their flavor.”",
+                    "author": "Clifford Stoll",
+                    "image": "/images/blog/blog-quote-hacker.webp"
+                  },
+                  "subheading_regular": "Beyond Passwords: ",
+                  "subheading_highlight": "The Passwordless Revolution",
+                  "subheading_paragraph": "By implementing public-key cryptography via WebAuthn, organizations can eliminate credential interception attacks completely, dramatically accelerating user login workflows while boosting enterprise security assurance.",
+                  "checklist_title_regular": "Best Practices for ",
+                  "checklist_title_highlight": "Access Hygiene",
+                  "checklist_items": [
+                    "FIDO2 Hardware Key Enforcement",
+                    "Compromised Credential Screening",
+                    "Biometric Passwordless Logins",
+                    "Single Sign-On (SSO) Centralization",
+                    "Role-Based Privilege Segregation",
+                    "Automated Offboarding De-provisioning"
+                  ],
+                  "secondary_image": "/images/blog-cloud.webp",
+                  "secondary_image_alt": "Secure authentication and access management"
+                },
+                {
+                  "id": "post-3",
+                  "slug": "key-strategies-to-secure-cloud-infrastructure",
+                  "category": "Cloud Defense",
+                  "title_regular": "Key Strategies to Secure ",
+                  "title_highlight": "Your Cloud Infrastructure",
+                  "title_suffix": " Across AWS & Azure",
+                  "author": {
+                    "name": "Elena Rostova",
+                    "role": "Cloud Security Principal"
+                  },
+                  "published_date": "July 19, 2024",
+                  "intro_paragraph": "Cloud environments deliver unprecedented scalability, but misconfigured storage buckets, exposed API keys, and overprivileged service roles create catastrophic vulnerabilities if left unmonitored.",
+                  "hero_image": "/images/blog-cloud.webp",
+                  "hero_image_alt": "Key Strategies to Secure Cloud Infrastructure",
+                  "body_paragraphs": [
+                    "Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platforms (CWPP) provide the automated visibility necessary to identify deviations from secure baseline templates across thousands of microservices.",
+                    "Implementing Infrastructure as Code (IaC) security linting directly into CI/CD build pipelines ensures vulnerabilities are caught before infrastructure changes ever reach production cloud clusters."
+                  ],
+                  "quote": {
+                    "quote": "“There is no cloud; it is just someone else’s computer. Ensure your cryptographic locks are verified before you trust that computer with your proprietary data.”",
+                    "author": "Cloud Security Council",
+                    "image": "/images/blog/blog-quote-hacker.webp"
+                  },
+                  "subheading_regular": "Multi-Cloud Compliance: ",
+                  "subheading_highlight": "Automated Auditing",
+                  "subheading_paragraph": "Continuous cloud compliance engines map resource states against CIS Benchmarks, SOC 2, and ISO 27001 controls in real-time, providing immediate drift notifications and automated remediation triggers.",
+                  "checklist_title_regular": "Essential Pillars of ",
+                  "checklist_title_highlight": "Cloud Hardening",
+                  "checklist_items": [
+                    "Automated CSPM Drift Detection",
+                    "Least-Privilege IAM Micro-Zoning",
+                    "eBPF Container Runtime Security",
+                    "KMS Hardware Key Lifecycle Governance",
+                    "Zero-Trust Ingress/Egress Gateways",
+                    "CI/CD Infrastructure Code Scans"
+                  ],
+                  "secondary_image": "/images/blog/blog-team-screens.webp",
+                  "secondary_image_alt": "Cloud infrastructure security operations"
+                },
+                {
+                  "id": "post-4",
+                  "slug": "the-role-of-threat-intelligence-modern-cyber-security",
+                  "category": "Threat Intelligence",
+                  "title_regular": "The Strategic Value of ",
+                  "title_highlight": "Actionable Threat Intelligence",
+                  "title_suffix": " in Enterprise Defense",
+                  "author": {
+                    "name": "David Vance",
+                    "role": "Senior CTI Analyst"
+                  },
+                  "published_date": "June 14, 2024",
+                  "intro_paragraph": "Raw telemetry without context is noise. Actionable Cyber Threat Intelligence (CTI) translates adversary indicators into targeted defensive playbooks before attacks materialize.",
+                  "hero_image": "/images/blog-intel.webp",
+                  "hero_image_alt": "The Role of Threat Intelligence in Modern Cyber Security",
+                  "body_paragraphs": [
+                    "Integrating open-source threat feeds with commercial dark web surveillance allows SOC teams to intercept adversary discussions, stolen session cookies, and compromised access broker listings before active deployment.",
+                    "By operationalizing the MITRE ATT&CK framework, defenders can stress-test existing detection logic against proven adversarial Tactics, Techniques, and Procedures (TTPs)."
+                  ],
+                  "quote": {
+                    "quote": "“If you know the enemy and know yourself, you need not fear the result of a hundred battles.”",
+                    "author": "Sun Tzu",
+                    "image": "/images/blog/blog-quote-hacker.webp"
+                  },
+                  "subheading_regular": "Predictive Defense: ",
+                  "subheading_highlight": "Pre-Emptive Countermeasures",
+                  "subheading_paragraph": "Forward-leaning organizations leverage threat intelligence not merely to respond to breaches, but to dynamically reconfigure firewall rules and honeypots before targeted campaigns initiate.",
+                  "checklist_title_regular": "Core Components of ",
+                  "checklist_title_highlight": "Threat Intel",
+                  "checklist_items": [
+                    "Tactical Indicator (IoC) Feeds",
+                    "Dark Web Access Broker Monitoring",
+                    "Adversary Campaign Attribution",
+                    "MITRE ATT&CK Matrix Mapping",
+                    "Automated SOAR Ingestion Pipelines",
+                    "Strategic Executive Risk Briefings"
+                  ],
+                  "secondary_image": "/images/hero-hacker.webp",
+                  "secondary_image_alt": "Threat intelligence analysis room"
+                }
+              ]
+            },
+            "get_a_quote": {
+              "eyebrow": "GET A QUOTE",
+              "title_regular": "Get A",
+              "title_highlight": "Quote",
+              "description": "Tell us about your requirements and our team will provide you with a customized solution and pricing. Fill out the form below to get started.",
+              "feature_image": "/images/quote-shield.webp",
+              "feature_image_alt": "Cybersecurity Protection Shield",
+              "features": [
+                {
+                  "id": "feat-1",
+                  "title": "Tailored Solutions",
+                  "description": "Get customized cybersecurity solutions for your business needs.",
+                  "icon": "Settings"
+                },
+                {
+                  "id": "feat-2",
+                  "title": "Quick Response",
+                  "description": "Our team will get back to you as soon as possible.",
+                  "icon": "Zap"
+                },
+                {
+                  "id": "feat-3",
+                  "title": "Expert Guidance",
+                  "description": "Receive expert advice and best recommendations.",
+                  "icon": "Users"
+                },
+                {
+                  "id": "feat-4",
+                  "title": "Competitive Pricing",
+                  "description": "Transparent and cost-effective pricing for all services.",
+                  "icon": "FileText"
+                }
+              ],
+              "form": {
+                "title_regular": "Request a",
+                "title_highlight": "Quote",
+                "description": "Please fill out the form below with your requirements. Our team will review your information and send you a customized quote.",
+                "fields": {
+                  "name": {
+                    "label": "Your Name *",
+                    "placeholder": "Your Name *",
+                    "icon": "User"
+                  },
+                  "email": {
+                    "label": "Your Email *",
+                    "placeholder": "Your Email *",
+                    "icon": "Mail"
+                  },
+                  "phone": {
+                    "label": "Your Phone *",
+                    "placeholder": "Your Phone *",
+                    "icon": "Phone"
+                  },
+                  "company": {
+                    "label": "Company Name",
+                    "placeholder": "Company Name",
+                    "icon": "FileText"
+                  },
+                  "service": {
+                    "label": "Service Interested In",
+                    "placeholder": "Service Interested In",
+                    "icon": "LayoutGrid",
+                    "options": [
+                      "Managed Security Services (MSS)",
+                      "Cloud Security Posture Management",
+                      "24/7 SOC Monitoring & Threat Detection",
+                      "Penetration Testing & Red Teaming",
+                      "Incident Response & Forensics",
+                      "Compliance & Regulatory Audit",
+                      "Zero Trust Architecture Implementation"
+                    ]
+                  },
+                  "requirements": {
+                    "label": "Your Requirements *",
+                    "placeholder": "Your Requirements *",
+                    "icon": "MessageSquare"
+                  },
+                  "country": {
+                    "label": "Country",
+                    "placeholder": "Country",
+                    "icon": "MapPin",
+                    "options": [
+                      "United States",
+                      "United Kingdom",
+                      "Canada",
+                      "Germany",
+                      "India",
+                      "Australia",
+                      "United Arab Emirates",
+                      "Singapore",
+                      "Other"
+                    ]
+                  },
+                  "industry": {
+                    "label": "Industry Type",
+                    "placeholder": "Industry Type",
+                    "icon": "Building2",
+                    "options": [
+                      "Financial Services & Banking",
+                      "Healthcare & Life Sciences",
+                      "Technology & SaaS",
+                      "E-Commerce & Retail",
+                      "Manufacturing & Logistics",
+                      "Government & Public Sector",
+                      "Legal & Professional Services",
+                      "Other"
+                    ]
+                  },
+                  "budget": {
+                    "label": "Budget Range",
+                    "placeholder": "Budget Range",
+                    "icon": "CircleDollarSign",
+                    "options": [
+                      "Under $10,000",
+                      "$10,000 - $25,000",
+                      "$25,000 - $50,000",
+                      "$50,000 - $100,000",
+                      "$100,000+"
+                    ]
+                  }
+                },
+                "button_text": "Get A Quote",
+                "security_note": "Your information is secure with us."
+              }
             }
           }
         }

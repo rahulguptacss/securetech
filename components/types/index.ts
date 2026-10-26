@@ -84,6 +84,8 @@ export interface ServiceItem {
   title_regular: string;
   title_highlight: string;
   description: string;
+  image?: string;
+  image_alt?: string;
   link_text: string;
   link_href: string;
 }
@@ -94,6 +96,35 @@ export interface ServicesSectionData {
   wave_alt: string;
   badge_text: string;
   items: ServiceItem[];
+}
+
+export interface ServiceBenefitItem {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+export interface ServiceDetailItem {
+  slug: string;
+  name: string;
+  sidebar_icon: string;
+  eyebrow: string;
+  title_regular: string;
+  title_highlight: string;
+  subtitle: string;
+  image: string;
+  image_alt: string;
+  paragraphs: string[];
+  benefits_eyebrow: string;
+  benefits_title_regular: string;
+  benefits_title_highlight: string;
+  benefits_description: string;
+  benefits: ServiceBenefitItem[];
+}
+
+export interface ServiceDetailSectionData {
+  sidebar_title: string;
+  services: ServiceDetailItem[];
 }
 
 export interface ProcessStep {
@@ -109,6 +140,21 @@ export interface ProcessSectionData {
   title_highlight: string;
   description: string;
   steps: ProcessStep[];
+  variant?: 'timeline' | 'cards' | string;
+}
+
+export interface MissionVisionItem {
+  eyebrow: string;
+  title_regular: string;
+  title_highlight: string;
+  description: string;
+  image: string;
+  image_alt: string;
+}
+
+export interface MissionVisionSectionData {
+  mission: MissionVisionItem;
+  vision: MissionVisionItem;
 }
 
 export interface BlogPostItem {
@@ -121,6 +167,46 @@ export interface BlogPostItem {
   excerpt: string;
   author: string;
   date: string;
+}
+
+export interface BlogQuoteData {
+  quote: string;
+  author?: string;
+  image?: string;
+}
+
+export interface BlogDetailAuthor {
+  name: string;
+  avatar?: string;
+  role?: string;
+}
+
+export interface BlogDetailPost {
+  id: string;
+  slug: string;
+  category: string;
+  title_regular: string;
+  title_highlight: string;
+  title_suffix?: string;
+  author: BlogDetailAuthor;
+  published_date: string;
+  intro_paragraph: string;
+  hero_image: string;
+  hero_image_alt: string;
+  body_paragraphs: string[];
+  quote: BlogQuoteData;
+  subheading_regular: string;
+  subheading_highlight: string;
+  subheading_paragraph: string;
+  checklist_title_regular: string;
+  checklist_title_highlight: string;
+  checklist_items: string[];
+  secondary_image: string;
+  secondary_image_alt: string;
+}
+
+export interface BlogDetailSectionData {
+  posts: BlogDetailPost[];
 }
 
 export interface BlogSectionData {
@@ -156,34 +242,74 @@ export interface BreadcrumbSectionData {
   items: BreadcrumbItem[];
 }
 
+export interface ContactCardItem {
+  id: string;
+  title: string;
+  description?: string;
+  line1?: string;
+  line2?: string;
+  action_text: string;
+  action_link: string;
+  icon: string;
+}
+
 export interface ContactSectionData {
   eyebrow: string;
   title_regular: string;
   title_highlight: string;
   description: string;
-  email: string;
-  phone: string;
-  address: string;
+  email?: string;
+  phone?: string;
+  address?: string;
+  cards?: ContactCardItem[];
+  form?: {
+    eyebrow: string;
+    title_regular: string;
+    title_highlight: string;
+    description: string;
+    fields: {
+      name_placeholder: string;
+      email_placeholder: string;
+      phone_placeholder: string;
+      subject_placeholder: string;
+      message_placeholder: string;
+    };
+    button_text: string;
+  };
+  map?: {
+    image?: string;
+    embed_url?: string;
+    office_title?: string;
+    office_address_line1?: string;
+    office_address_line2?: string;
+  };
 }
 
 export interface FaqItem {
+  id?: string;
+  number?: string;
   question: string;
   answer: string;
 }
 
 export interface FaqSectionData {
-  eyebrow: string;
-  title_regular: string;
-  title_highlight: string;
+  eyebrow?: string;
+  title_regular?: string;
+  title_highlight?: string;
   items: FaqItem[];
 }
 
 export interface PortfolioItem {
   id: string;
-  title: string;
+  slug: string;
   category: string;
-  result: string;
+  title: string;
+  description: string;
   image: string;
+  image_alt: string;
+  link_text: string;
+  link_href: string;
+  result?: string;
 }
 
 export interface PortfolioSectionData {
@@ -220,6 +346,48 @@ export interface NotFoundData {
   };
 }
 
+export interface QuoteFeatureItem {
+  id: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface QuoteFormField {
+  label: string;
+  placeholder: string;
+  icon: string;
+  options?: string[];
+}
+
+export interface GetAQuoteSectionData {
+  eyebrow: string;
+  title_regular: string;
+  title_highlight: string;
+  description: string;
+  feature_image: string;
+  feature_image_alt: string;
+  features: QuoteFeatureItem[];
+  form: {
+    title_regular: string;
+    title_highlight: string;
+    description: string;
+    fields: {
+      name: QuoteFormField;
+      email: QuoteFormField;
+      phone: QuoteFormField;
+      company: QuoteFormField;
+      service: QuoteFormField;
+      requirements: QuoteFormField;
+      country: QuoteFormField;
+      industry: QuoteFormField;
+      budget: QuoteFormField;
+    };
+    button_text: string;
+    security_note: string;
+  };
+}
+
 export interface SitePages {
   home: PageMeta;
   about: PageMeta;
@@ -228,6 +396,10 @@ export interface SitePages {
   blog: PageMeta;
   faq: PageMeta;
   contact: PageMeta;
+  service_detail?: PageMeta;
+  portfolio_detail?: PageMeta;
+  blog_detail?: PageMeta;
+  get_a_quote?: PageMeta;
   not_found: NotFoundData;
 }
 
@@ -237,12 +409,18 @@ export interface SiteSections {
   about: AboutSectionData;
   soc_banner: SocBannerData;
   services: ServicesSectionData;
+  service_detail?: ServiceDetailSectionData;
+  portfolio_detail?: ServiceDetailSectionData;
+  blog_detail?: BlogDetailSectionData;
   process: ProcessSectionData;
+  about_process?: ProcessSectionData;
+  mission_vision?: MissionVisionSectionData;
   blog: BlogSectionData;
   cta_banner: CtaBannerData;
   contact: ContactSectionData;
   faq: FaqSectionData;
   portfolio: PortfolioSectionData;
+  get_a_quote?: GetAQuoteSectionData;
 }
 
 export interface TemplateComponents {

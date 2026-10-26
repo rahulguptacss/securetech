@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Outfit, Inter } from 'next/font/google';
 import './globals.css';
 import { pages, common } from '../components/types';
+import ScrollToTop from '../components/ui/ScrollToTop';
 
 const outfit = Outfit({
   variable: '--font-outfit',
@@ -36,6 +37,7 @@ export default function RootLayout({
       className={`${outfit.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans bg-[#040812] text-slate-100 selection:bg-[#00f0ff] selection:text-black">
+        <ScrollToTop />
         {children}
       </body>
     </html>

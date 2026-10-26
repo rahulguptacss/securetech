@@ -23,7 +23,7 @@ export default function BlogPage() {
         watermark={pageData.watermark}
       />
     ),
-    Blog: <Blog data={sections.blog} />,
+    Blog: <Blog data={sections.blog} showButton={false} />,
   };
 
   return (

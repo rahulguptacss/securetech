@@ -63,11 +63,19 @@ export default function Hero({ data }: HeroProps) {
     mouseY.set(0);
   };
 
+  const highlightWords = (data.title_highlight || 'SAFER TOMORROW').trim().split(/\s+/);
+  const highlightWord1 = highlightWords[0] || 'SAFER';
+  const highlightWord2 = highlightWords.slice(1).join(' ') || 'TOMORROW';
+  const eyebrowItems = (data.eyebrow || 'PROTECT . DETECT . PREVENT')
+    .split('.')
+    .map((s) => s.trim())
+    .filter(Boolean);
+
   return (
     <section
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full pt-28 pb-1 sm:pt-36 sm:pb-2 bg-[#000000] overflow-hidden select-none"
+      className="relative w-full pt-24 pb-8 sm:pt-32 sm:pb-4 lg:pt-36 lg:pb-2 bg-[#000000] overflow-hidden select-none"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Upper Row: Left Text Content + Right Cyber Hacker Image */}
@@ -77,28 +85,34 @@ export default function Hero({ data }: HeroProps) {
             style={{ x: textX, y: textY }}
             className="lg:col-span-8 z-10 flex flex-col justify-end"
           >
-            {/* 1. Page load tagline reveal: PROTECT . DETECT . PREVENT */}
+            {/* 1. Page load tagline reveal from data.json */}
             <motion.div
               initial={{ opacity: 0, y: -12, letterSpacing: '0.15em' }}
               animate={{ opacity: 1, y: 0, letterSpacing: '0.28em' }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-5 sm:mb-7"
+              className="mb-4 sm:mb-6"
             >
-              <p className="text-[11px] sm:text-[12px] font-medium uppercase text-white/90">
-                PROTECT <span className="text-[#00f0ff] font-bold mx-1.5">.</span> DETECT{' '}
-                <span className="text-[#00f0ff] font-bold mx-1.5">.</span> PREVENT
+              <p className="text-xs sm:text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+                {eyebrowItems.map((item, idx) => (
+                  <span key={idx}>
+                    {item}
+                    {idx < eyebrowItems.length - 1 && (
+                      <span className="text-[#00f0ff] font-bold mx-1.5">•</span>
+                    )}
+                  </span>
+                ))}
               </p>
             </motion.div>
 
-            {/* 1. Headings Reveal: Advanced Cyber Security & Solutions For A */}
+            {/* 2. Headings Reveal: Advanced Cyber Security & Solutions For A */}
             <motion.div
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-5 sm:mb-7"
+              className="mb-4 sm:mb-6"
             >
-              <h1 className="text-[28px] sm:text-[34px] md:text-[42px] lg:text-[44px] font-bold text-white tracking-tight leading-[1.2]">
-                <span className="relative inline-block pb-1.5">
+              <h1 className="text-[26px] sm:text-[34px] md:text-[40px] lg:text-[44px] font-bold text-white tracking-tight leading-[1.2]">
+                <span className="relative inline-block pb-1 sm:pb-1.5">
                   {data.title_line1 || 'Advanced Cyber Security'}
                   {/* Underline draws in from left */}
                   <motion.span
@@ -109,25 +123,37 @@ export default function Hero({ data }: HeroProps) {
                   />
                 </span>
               </h1>
-              <h2 className="text-[28px] sm:text-[34px] md:text-[42px] lg:text-[44px] font-bold text-white tracking-tight leading-[1.2] mt-1.5 sm:mt-2">
+              <h2 className="text-[26px] sm:text-[34px] md:text-[40px] lg:text-[44px] font-bold text-white tracking-tight leading-[1.2] mt-1 sm:mt-1.5">
                 {data.title_line2 || 'Solutions For A'}
               </h2>
             </motion.div>
 
-            {/* 1. Giant SAFER Reveal */}
+            {/* 3. Giant Highlight Word 1 Reveal */}
             <motion.div
               initial={{ opacity: 0, y: 28, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="select-none"
             >
-              <span className="block text-7xl sm:text-9xl md:text-[120px] lg:text-[145px] xl:text-[165px] font-[900] tracking-tight leading-[0.85] uppercase bg-gradient-to-r from-[#00ffb2] via-[#2bf0bd] to-[#80ffdb] bg-clip-text text-transparent">
-                SAFER
+              <span className="block text-[62px] sm:text-[88px] md:text-[115px] lg:text-[145px] xl:text-[165px] font-[950] tracking-tight leading-[0.88] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
+                {highlightWord1}
+              </span>
+            </motion.div>
+
+            {/* 4. Giant Highlight Word 2 Reveal for Mobile (< lg, stacked directly under Word 1) */}
+            <motion.div
+              initial={{ opacity: 0, y: 28, scale: 0.97 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.85, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+              className="block lg:hidden select-none mt-1"
+            >
+              <span className="block text-[62px] sm:text-[88px] md:text-[115px] font-[950] tracking-tight leading-[0.88] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
+                {highlightWord2}
               </span>
             </motion.div>
           </motion.div>
 
-          {/* Right Column: 2. Hacker image slight zoom-in appear + 3. Shield pulse & scan line + 4. Mouse parallax */}
+          {/* Right Column: Hacker Image Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -139,10 +165,10 @@ export default function Hero({ data }: HeroProps) {
               rotateY: imageRotateY,
               perspective: 1000,
             }}
-            className="lg:col-span-4 flex justify-center lg:justify-end z-10 -translate-y-4 sm:-translate-y-6 lg:-translate-y-8"
+            className="lg:col-span-4 flex justify-center lg:justify-end z-10 mt-4 sm:mt-6 lg:mt-0 lg:-translate-y-8"
           >
-            <div className="relative h-[260px] sm:h-[290px] md:h-[320px] lg:h-[330px] w-auto aspect-[4/4.8] max-w-full rounded-2xl overflow-hidden border border-cyan-400/35 bg-[#06101e] shadow-[0_0_35px_rgba(0,240,255,0.22)] group">
-              {/* 2. Hacker image with slight cinematic zoom-in entrance */}
+            <div className="relative w-full max-w-[420px] lg:max-w-none lg:w-auto aspect-[4/3.8] sm:aspect-[4/4.2] lg:aspect-[4/4.8] max-h-[315px] sm:max-h-[370px] lg:max-h-none lg:h-[330px] xl:h-[360px] rounded-2xl sm:rounded-3xl overflow-hidden border border-cyan-400/35 bg-[#06101e] shadow-[0_0_35px_rgba(0,240,255,0.22)] group">
+              {/* Hacker image with slight cinematic zoom-in entrance */}
               <motion.div
                 initial={{ scale: 1.14, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -150,39 +176,39 @@ export default function Hero({ data }: HeroProps) {
                 className="relative w-full h-full"
               >
                 <Image
-                  src={data.image}
+                  src={data.image || '/images/hero-hacker.webp'}
                   alt={data.image_alt || 'Cyber Security Solutions'}
                   fill
                   priority
-                  sizes="(max-width: 768px) 100vw, 320px"
+                  sizes="(max-width: 1024px) 100vw, 400px"
                   className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 />
               </motion.div>
 
-              {/* 3. Shield Glow Pulse right over the holographic shield lock */}
+              {/* Shield Glow Pulse right over the holographic shield lock */}
               <div
-                className="pointer-events-none absolute top-[38%] left-[45%] -translate-x-1/2 -translate-y-1/2 h-32 w-32 rounded-full bg-cyan-400/25 blur-xl animate-shield-glow z-10"
+                className="pointer-events-none absolute top-[36%] left-[50%] -translate-x-1/2 -translate-y-1/2 h-32 w-32 rounded-full bg-cyan-400/25 blur-xl animate-shield-glow z-10"
                 aria-hidden="true"
               />
 
-              {/* 3. Cyber Scan Line sweeping across the card continuously */}
+              {/* Cyber Scan Line sweeping across the card continuously */}
               <div className="animate-scanline" aria-hidden="true" />
 
               {/* Vignette Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none z-10" />
             </div>
           </motion.div>
         </div>
 
-        {/* 1. Bottom Full-Width Row: Giant TOMORROW Reveal */}
+        {/* Desktop-only Bottom Full-Width Row: Giant Highlight Word 2 Reveal */}
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
-          className="w-full select-none overflow-hidden mt-1 sm:mt-0"
+          className="hidden lg:block w-full select-none overflow-hidden mt-1 sm:mt-0"
         >
-          <span className="block w-full text-7xl sm:text-9xl md:text-[120px] lg:text-[145px] xl:text-[165px] font-[900] tracking-tight leading-[0.85] uppercase bg-gradient-to-r from-[#00ffb2] via-[#5af7c7] via-40% to-[#ffffff] bg-clip-text text-transparent">
-            TOMORROW
+          <span className="block w-full text-[135px] xl:text-[165px] font-[950] tracking-tight leading-[0.85] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
+            {highlightWord2}
           </span>
         </motion.div>
       </div>

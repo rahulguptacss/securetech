@@ -19,7 +19,7 @@ export default function SocBanner({ data }: SocBannerProps) {
         className="relative w-full aspect-[16/9] sm:aspect-[21/9] lg:aspect-[24/9] max-h-[700px] overflow-hidden rounded-none border-y border-cyan-900/30"
       >
         <Image
-          src={data.image || '/images/soc-room.jpg'}
+          src={data.image || '/images/soc-room.webp'}
           alt={data.image_alt || 'Security Operations Center'}
           fill
           priority={false}

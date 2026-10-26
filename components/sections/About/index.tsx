@@ -60,7 +60,7 @@ export default function About({ data }: AboutProps) {
   };
 
   return (
-    <section id="about" className="relative w-full pt-4 sm:pt-6 lg:pt-8 pb-16 sm:pb-20 bg-[#000000] overflow-hidden">
+    <section id="about" className="relative w-full pt-10 sm:pt-14 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 bg-[#000000] overflow-hidden">
       {/* Ambient background cyber glow */}
       <div
         className="pointer-events-none absolute top-1/2 -left-40 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-cyan-500/[0.07] blur-[140px]"
@@ -85,11 +85,11 @@ export default function About({ data }: AboutProps) {
                 rotateY: cardRotateY,
                 perspective: 1000,
               }}
-              className="relative w-full max-w-[480px] aspect-square rounded-3xl overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_35px_rgba(0,240,255,0.28)] bg-[#030914] group transition-shadow duration-500 hover:shadow-[0_0_55px_rgba(0,240,255,0.45)]"
+              className="relative w-full max-w-[480px] aspect-square rounded-2xl overflow-hidden border-2 border-[#00f0ff] shadow-[0_0_35px_rgba(0,240,255,0.28)] bg-[#030914] group transition-shadow duration-500 hover:shadow-[0_0_55px_rgba(0,240,255,0.45)]"
             >
               {/* Robotic Hand Image */}
               <Image
-                src={data.image || '/images/about-robot.jpg'}
+                src={data.image || '/images/about-robot.webp'}
                 alt={data.image_alt || 'Establish and maintain complete digital security'}
                 fill
                 priority
@@ -168,12 +168,9 @@ export default function About({ data }: AboutProps) {
               transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
               className="text-3xl sm:text-4xl lg:text-[46px] font-bold text-white leading-[1.18] tracking-tight mb-6"
             >
-              <span className="block">Establish and maintain</span>
-              <span className="block mt-1">
-                complete{' '}
-                <span className="text-[#00f0ff] drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]">
-                  digital security
-                </span>
+              <span>{data.title_regular} </span>
+              <span className="text-[#00f0ff] drop-shadow-[0_0_15px_rgba(0,240,255,0.4)]">
+                {data.title_highlight}
               </span>
             </motion.h2>
 

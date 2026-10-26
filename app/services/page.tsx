@@ -29,7 +29,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#040812] text-slate-100 font-sans">
+    <div className="flex min-h-screen flex-col bg-[#000000] text-slate-100 font-sans">
       <Header data={common.Header} />
       <main className="w-full flex-1">
         {pageData.components.map((block: PageComponent) => (
