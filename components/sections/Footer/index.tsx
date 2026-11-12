@@ -147,20 +147,20 @@ export default function Footer({ data }: FooterProps) {
                 className="group relative flex items-center justify-center shrink-0 cursor-pointer select-none"
               >
                 {/* Outer atmospheric cyan blur glow */}
-                <div className="pointer-events-none absolute inset-[-12px] rounded-full bg-cyan-500/15 blur-2xl group-hover:bg-cyan-500/25 transition-opacity duration-300" />
+                <div className="pointer-events-none absolute inset-[-12px] rounded-full bg-cyan-500/10 blur-2xl group-hover:bg-cyan-500/20 transition-opacity duration-300" />
 
                 {/* Outer Subtle Dark Circle Ring */}
-                <div className="relative flex items-center justify-center w-56 h-56 rounded-full border border-cyan-500/30 bg-[#001524]/80 p-2 transform-gpu will-change-transform transition-transform duration-250 ease-out group-hover:scale-105">
+                <div className="relative flex items-center justify-center w-56 h-56 rounded-full border border-cyan-500/35 bg-[#020b14]/95 p-2 transform-gpu will-change-transform transition-transform duration-250 ease-out group-hover:scale-105">
                   
                   {/* Middle Neon Cyan Ring */}
-                  <div className="relative flex items-center justify-center w-full h-full rounded-full border-2 border-[#00f0ff] shadow-[0_0_24px_rgba(0,240,255,0.35)] p-2">
+                  <div className="relative flex items-center justify-center w-full h-full rounded-full border-2 border-[#00d4e6]/80 shadow-[0_0_20px_rgba(0,240,255,0.28)] p-2">
                     
-                    {/* Inner Glowing Cyan/Turquoise Disk */}
-                    <div className="relative flex items-center justify-center gap-2.5 w-full h-full rounded-full bg-gradient-to-tr from-[#00d8e6] via-[#00f0ff] to-[#00ffc8] shadow-[0_0_35px_rgba(0,240,255,0.7),inset_0_0_16px_rgba(255,255,255,0.45)] transform-gpu transition-[filter,box-shadow] duration-200 group-hover:brightness-110">
+                    {/* Inner Dark Cyber Teal/Cyan Disk */}
+                    <div className="relative flex items-center justify-center gap-2.5 w-full h-full rounded-full bg-gradient-to-tr from-[#022c3d] via-[#04526b] to-[#06758c] border border-[#00f0ff]/40 shadow-[0_0_26px_rgba(0,240,255,0.38),inset_0_0_18px_rgba(0,240,255,0.25)] transform-gpu transition-[filter,box-shadow] duration-200 group-hover:brightness-115">
                       <span className="text-lg font-extrabold text-white tracking-wide drop-shadow-sm">
                         {data.button_text || 'Get Started'}
                       </span>
-                      <span className="flex h-7.5 w-7.5 items-center justify-center rounded-full bg-white text-[#00b4c8] shadow-md transition-transform duration-200 group-hover:translate-x-1">
+                      <span className="flex h-7.5 w-7.5 items-center justify-center rounded-full bg-white text-[#04526b] shadow-md transition-transform duration-200 group-hover:translate-x-1">
                         <ArrowRight className="h-4 w-4 stroke-[2.5]" />
                       </span>
                     </div>
@@ -277,23 +277,23 @@ export default function Footer({ data }: FooterProps) {
               className="group relative flex items-center justify-center shrink-0 cursor-pointer select-none"
             >
               {/* Outer atmospheric cyan blur glow */}
-              <div className="pointer-events-none absolute inset-[-10px] rounded-full bg-cyan-500/20 blur-xl group-hover:bg-cyan-500/30 transition-opacity duration-300" />
+              <div className="pointer-events-none absolute inset-[-10px] rounded-full bg-cyan-500/12 blur-xl group-hover:bg-cyan-500/22 transition-opacity duration-300" />
 
               {/* Outer Ring with Glowing Cyan Dot on Track */}
-              <div className="relative flex items-center justify-center w-44 h-44 sm:w-48 sm:h-48 rounded-full border border-cyan-500/35 bg-[#001524]/60 p-2 transform-gpu will-change-transform transition-transform duration-250 ease-out group-hover:scale-105">
+              <div className="relative flex items-center justify-center w-44 h-44 sm:w-48 sm:h-48 rounded-full border border-cyan-500/35 bg-[#020b14]/95 p-2 transform-gpu will-change-transform transition-transform duration-250 ease-out group-hover:scale-105">
                 
                 {/* Glowing Orbital Dot on Outer Ring (Left side track dot) */}
                 <span className="absolute left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#00f0ff] shadow-[0_0_8px_#00f0ff,0_0_16px_#00f0ff]" />
 
                 {/* Middle Neon Cyan Ring */}
-                <div className="relative flex items-center justify-center w-full h-full rounded-full border-2 border-[#00f0ff] shadow-[0_0_20px_rgba(0,240,255,0.4)] p-2">
+                <div className="relative flex items-center justify-center w-full h-full rounded-full border-2 border-[#00d4e6]/80 shadow-[0_0_18px_rgba(0,240,255,0.3)] p-2">
                   
-                  {/* Inner Glowing Cyan/Turquoise Disk */}
-                  <div className="relative flex items-center justify-center gap-2 w-full h-full rounded-full bg-gradient-to-tr from-[#00c8e6] via-[#00f0ff] to-[#00ffc8] shadow-[0_0_30px_rgba(0,240,255,0.8),inset_0_0_14px_rgba(255,255,255,0.5)] transform-gpu transition-[filter,box-shadow] duration-200 group-hover:brightness-110">
+                  {/* Inner Dark Cyber Teal/Cyan Disk */}
+                  <div className="relative flex items-center justify-center gap-2 w-full h-full rounded-full bg-gradient-to-tr from-[#022c3d] via-[#04526b] to-[#06758c] border border-[#00f0ff]/40 shadow-[0_0_24px_rgba(0,240,255,0.4),inset_0_0_14px_rgba(0,240,255,0.25)] transform-gpu transition-[filter,box-shadow] duration-200 group-hover:brightness-115">
                     <span className="text-[15px] font-extrabold text-white tracking-wide drop-shadow-sm">
                       {data.button_text || 'Get Started'}
                     </span>
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#00b4c8] shadow-md transition-transform duration-200 group-hover:translate-x-1">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#04526b] shadow-md transition-transform duration-200 group-hover:translate-x-1">
                       <ArrowRight className="h-3.5 w-3.5 stroke-[2.5]" />
                     </span>
                   </div>

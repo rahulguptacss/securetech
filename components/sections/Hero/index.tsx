@@ -79,11 +79,11 @@ export default function Hero({ data }: HeroProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Upper Row: Left Text Content + Right Cyber Hacker Image */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-end mb-2 sm:mb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-end mb-1 sm:mb-2">
           {/* Left Column: Heading Reveal Sequence */}
           <motion.div
             style={{ x: textX, y: textY }}
-            className="lg:col-span-8 z-10 flex flex-col justify-end"
+            className="lg:col-span-7 z-10 flex flex-col justify-end"
           >
             {/* 1. Page load tagline reveal from data.json */}
             <motion.div
@@ -92,7 +92,7 @@ export default function Hero({ data }: HeroProps) {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="mb-4 sm:mb-6"
             >
-              <p className="text-xs sm:text-[13px] font-semibold tracking-[0.25em] uppercase text-white/90">
+              <p className="text-[10px] sm:text-xs font-semibold tracking-[0.22em] uppercase text-white/90">
                 {eyebrowItems.map((item, idx) => (
                   <span key={idx}>
                     {item}
@@ -109,9 +109,9 @@ export default function Hero({ data }: HeroProps) {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-4 sm:mb-6"
+              className="mb-3 sm:mb-5"
             >
-              <h1 className="text-[26px] sm:text-[34px] md:text-[40px] lg:text-[44px] font-bold text-white tracking-tight leading-[1.2]">
+              <h1 className="text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] font-bold text-white tracking-tight leading-[1.2]">
                 <span className="relative inline-block pb-1 sm:pb-1.5">
                   {data.title_line1 || 'Advanced Cyber Security'}
                   {/* Underline draws in from left */}
@@ -123,31 +123,31 @@ export default function Hero({ data }: HeroProps) {
                   />
                 </span>
               </h1>
-              <h2 className="text-[26px] sm:text-[34px] md:text-[40px] lg:text-[44px] font-bold text-white tracking-tight leading-[1.2] mt-1 sm:mt-1.5">
+              <h2 className="text-[22px] sm:text-[26px] md:text-[32px] lg:text-[36px] font-bold text-white tracking-tight leading-[1.2] mt-1 sm:mt-1.5">
                 {data.title_line2 || 'Solutions For A'}
               </h2>
             </motion.div>
 
-            {/* 3. Giant Highlight Word 1 Reveal */}
+            {/* 3. Highlight Word 1 Reveal */}
             <motion.div
               initial={{ opacity: 0, y: 28, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.85, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
               className="select-none"
             >
-              <span className="block text-[62px] sm:text-[88px] md:text-[115px] lg:text-[145px] xl:text-[165px] font-[950] tracking-tight leading-[0.88] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
+              <span className="block text-[44px] sm:text-[62px] md:text-[80px] lg:text-[104px] xl:text-[120px] font-[950] tracking-tight leading-[0.88] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
                 {highlightWord1}
               </span>
             </motion.div>
 
-            {/* 4. Giant Highlight Word 2 Reveal for Mobile (< lg, stacked directly under Word 1) */}
+            {/* 4. Highlight Word 2 Reveal for Mobile (< lg, stacked directly under Word 1) */}
             <motion.div
               initial={{ opacity: 0, y: 28, scale: 0.97 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.85, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
               className="block lg:hidden select-none mt-1"
             >
-              <span className="block text-[62px] sm:text-[88px] md:text-[115px] font-[950] tracking-tight leading-[0.88] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
+              <span className="block text-[44px] sm:text-[62px] md:text-[80px] font-[950] tracking-tight leading-[0.88] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
                 {highlightWord2}
               </span>
             </motion.div>
@@ -165,9 +165,9 @@ export default function Hero({ data }: HeroProps) {
               rotateY: imageRotateY,
               perspective: 1000,
             }}
-            className="lg:col-span-4 flex justify-center lg:justify-end z-10 mt-4 sm:mt-6 lg:mt-0 lg:-translate-y-8"
+            className="lg:col-span-5 flex justify-center z-10 mt-4 sm:mt-6 lg:mt-0 lg:translate-y-12 xl:translate-y-14"
           >
-            <div className="relative w-full max-w-[420px] lg:max-w-none lg:w-auto aspect-[4/3.8] sm:aspect-[4/4.2] lg:aspect-[4/4.8] max-h-[315px] sm:max-h-[370px] lg:max-h-none lg:h-[330px] xl:h-[360px] rounded-2xl sm:rounded-3xl overflow-hidden border border-cyan-400/35 bg-[#06101e] shadow-[0_0_35px_rgba(0,240,255,0.22)] group">
+            <div className="relative w-full max-w-[420px] lg:max-w-none lg:w-[320px] xl:w-[350px] aspect-[4/3.8] sm:aspect-[4/4.2] lg:aspect-auto max-h-[315px] sm:max-h-[370px] lg:max-h-none lg:h-[300px] xl:h-[325px] rounded-2xl sm:rounded-3xl overflow-hidden border border-cyan-400/35 bg-[#06101e] shadow-[0_0_35px_rgba(0,240,255,0.22)] group">
               {/* Hacker image with slight cinematic zoom-in entrance */}
               <motion.div
                 initial={{ scale: 1.14, opacity: 0 }}
@@ -200,14 +200,14 @@ export default function Hero({ data }: HeroProps) {
           </motion.div>
         </div>
 
-        {/* Desktop-only Bottom Full-Width Row: Giant Highlight Word 2 Reveal */}
+        {/* Desktop-only Bottom Full-Width Row: Highlight Word 2 Reveal */}
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
-          className="hidden lg:block w-full select-none overflow-hidden mt-1 sm:mt-0"
+          className="hidden lg:block w-full select-none overflow-hidden mt-1"
         >
-          <span className="block w-full text-[135px] xl:text-[165px] font-[950] tracking-tight leading-[0.85] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
+          <span className="block w-full text-[96px] xl:text-[118px] font-[950] tracking-tight leading-[0.85] uppercase bg-gradient-to-b from-[#ffffff] via-[#75f5e8] to-[#00f0ff] bg-clip-text text-transparent">
             {highlightWord2}
           </span>
         </motion.div>

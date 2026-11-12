@@ -8,10 +8,6 @@ import {
   Menu,
   X,
   ArrowRight,
-  ShieldCheck,
-  Activity,
-  Lock,
-  Radio,
   ChevronDown,
   ChevronRight,
 } from 'lucide-react';
@@ -28,8 +24,6 @@ export default function Header({ data }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expandedMobileDropdown, setExpandedMobileDropdown] = useState<string | null>(null);
   const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
-  const [statusHudOpen, setStatusHudOpen] = useState(false);
-  const hudRef = useRef<HTMLDivElement>(null);
   const desktopTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Scroll detection for sticky header backdrop styling
@@ -46,15 +40,13 @@ export default function Header({ data }: HeaderProps) {
     setMobileMenuOpen(false);
     setExpandedMobileDropdown(null);
     setDesktopDropdown(null);
-    setStatusHudOpen(false);
   }, [pathname]);
 
-  // Close HUD and dropdowns on Escape key
+  // Close dropdowns on Escape key
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setMobileMenuOpen(false);
-        setStatusHudOpen(false);
         setDesktopDropdown(null);
         setExpandedMobileDropdown(null);
       }
@@ -62,19 +54,6 @@ export default function Header({ data }: HeaderProps) {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
-  // Close HUD on outside click
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (hudRef.current && !hudRef.current.contains(e.target as Node)) {
-        setStatusHudOpen(false);
-      }
-    };
-    if (statusHudOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-    }
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [statusHudOpen]);
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
@@ -240,89 +219,6 @@ export default function Header({ data }: HeaderProps) {
           {/* Desktop Right Action Section */}
           <div className="hidden lg:flex items-center gap-5">
             <div className="h-6 w-[1px] bg-slate-700/60" />
-
-            {/* Cyber Radar Control Box with Interactive Status HUD */}
-            <div className="relative" ref={hudRef}>
-              <button
-                type="button"
-                onClick={() => setStatusHudOpen(!statusHudOpen)}
-                aria-label="Toggle Live Cyber Security Status"
-                className="relative flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-500/30 bg-[#06101e] shadow-[0_0_15px_rgba(0,240,255,0.15)] transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_22px_rgba(0,240,255,0.5)] hover:scale-105 active:scale-95 group cursor-pointer overflow-hidden"
-              >
-                <span className="absolute inset-0 rounded-2xl bg-cyan-500/5 group-hover:bg-cyan-500/15 transition-colors" />
-                <span className="absolute h-3 w-3 rounded-full border border-cyan-400/80 animate-ring-expand pointer-events-none" />
-                <span className="absolute h-3 w-3 rounded-full border border-cyan-300/40 animate-ring-expand pointer-events-none [animation-delay:1.2s]" />
-                <span className="absolute h-5 w-5 rounded-full bg-cyan-400/35 blur-sm" />
-                <span className="relative z-10 h-3 w-3 rounded-full bg-[#00f0ff] animate-dot-glow" />
-                <span className="pointer-events-none absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity text-[10px] font-bold text-cyan-300 tracking-wider whitespace-nowrap bg-black/90 px-2 py-0.5 rounded border border-cyan-500/30 shadow-lg">
-                  LIVE SECURE
-                </span>
-              </button>
-
-              {/* Interactive Cyber Security HUD Popover */}
-              <AnimatePresence>
-                {statusHudOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, y: 8, scale: 0.95 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute right-0 top-full mt-3 w-72 rounded-2xl border border-cyan-400/40 bg-[#050c18]/95 p-4 shadow-[0_20px_50px_rgba(0,0,0,0.9),0_0_30px_rgba(0,240,255,0.25)] backdrop-blur-xl z-50"
-                  >
-                    <div className="flex items-center justify-between pb-3 border-b border-cyan-900/40">
-                      <div className="flex items-center gap-2">
-                        <span className="h-2 w-2 rounded-full bg-[#00f0ff] shadow-[0_0_8px_#00f0ff]" />
-                        <span className="text-xs font-bold tracking-widest text-[#00f0ff] uppercase">
-                          Defense Grid Active
-                        </span>
-                      </div>
-                      <span className="text-[10px] font-mono text-slate-400">24/7 SOC</span>
-                    </div>
-
-                    <div className="space-y-2.5 py-3 text-xs">
-                      <div className="flex items-center justify-between text-slate-300">
-                        <span className="flex items-center gap-2 text-slate-400">
-                          <ShieldCheck className="h-3.5 w-3.5 text-cyan-400" />
-                          Zero-Trust Shield:
-                        </span>
-                        <span className="font-semibold text-emerald-400">Armed (100%)</span>
-                      </div>
-                      <div className="flex items-center justify-between text-slate-300">
-                        <span className="flex items-center gap-2 text-slate-400">
-                          <Activity className="h-3.5 w-3.5 text-cyan-400" />
-                          Threat Radar:
-                        </span>
-                        <span className="font-mono text-cyan-300 font-semibold">0 Detected</span>
-                      </div>
-                      <div className="flex items-center justify-between text-slate-300">
-                        <span className="flex items-center gap-2 text-slate-400">
-                          <Lock className="h-3.5 w-3.5 text-cyan-400" />
-                          Encryption:
-                        </span>
-                        <span className="font-mono text-slate-200">Quantum AES-256</span>
-                      </div>
-                      <div className="flex items-center justify-between text-slate-300">
-                        <span className="flex items-center gap-2 text-slate-400">
-                          <Radio className="h-3.5 w-3.5 text-cyan-400" />
-                          Response Latency:
-                        </span>
-                        <span className="font-mono text-emerald-400 font-semibold">12ms</span>
-                      </div>
-                    </div>
-
-                    <div className="pt-2 border-t border-cyan-900/40 text-center">
-                      <Link
-                        href="/contact"
-                        onClick={() => setStatusHudOpen(false)}
-                        className="text-[11px] font-bold text-[#00f0ff] hover:underline"
-                      >
-                        Request Security Audit →
-                      </Link>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
 
             {/* Get a Quote Button */}
             {data.button_text && (

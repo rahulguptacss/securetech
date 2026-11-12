@@ -240,10 +240,6 @@
                 {
                   "key": "ServicesSection",
                   "component": "Services"
-                },
-                {
-                  "key": "ProcessSection",
-                  "component": "Process"
                 }
               ]
             },
